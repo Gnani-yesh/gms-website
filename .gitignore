@@ -28,3 +28,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# source asset folder (originals — renamed copies live in public/mockups)
+/Mockups/

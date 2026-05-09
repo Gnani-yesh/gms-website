@@ -20,6 +20,12 @@ export type CaseStudy = {
   /** Visual tone for the page accent (warm/cool/magenta). */
   tone: "warm" | "cool" | "magenta";
 
+  /** Cinematic device-render mockup used in hero + index. */
+  image: {
+    src: string;
+    alt: string;
+  };
+
   hero: {
     eyebrow: string;
     title: string;
@@ -77,6 +83,11 @@ export const CASE_STUDIES: CaseStudy[] = [
     region: "Bengaluru · Singapore",
     duration: "14 months · operating",
     tone: "warm",
+
+    image: {
+      src: "/mockups/work/northwave.png",
+      alt: "Northwave pipeline analytics console rendered on a laptop and phone",
+    },
 
     hero: {
       eyebrow: "Case study · 01",
@@ -166,32 +177,37 @@ export const CASE_STUDIES: CaseStudy[] = [
   },
 
   {
-    slug: "halcyon-house",
-    client: "Halcyon House",
+    slug: "casa-eston",
+    client: "Casa Eston",
     sector: "Hospitality",
     year: "2024 — 25",
     status: "Live",
     scope: ["Brand", "Website", "Operations Platform"],
-    region: "North Goa, India",
+    region: "Coastal · India",
     duration: "10 months",
     tone: "warm",
 
+    image: {
+      src: "/mockups/work/casa-eston.png",
+      alt: "Casa Eston villa booking console on laptop, tablet and phone",
+    },
+
     hero: {
       eyebrow: "Case study · 02",
-      title: "A house, not a hotel —",
+      title: "A villa, not a hotel —",
       italic: "and the system behind it.",
       deck:
-        "A twelve-room boutique on the Mandovi river needed to feel ageless from the marketing site to the concierge. We built the brand, the website and the operating system as one connected piece.",
+        "A small coastal villa needed to feel ageless from the marketing site to the concierge. We built the brand, the website and the operating system as one connected piece.",
     },
 
     overview: {
       summary:
-        "Halcyon House is a small luxury property in North Goa with a strong founder-vision and almost no operational backbone. Bookings were on a spreadsheet. The website was a placeholder. The brand existed in the founder’s head. We engaged for ten months across identity, marketing site, and the bespoke operations platform that runs the property today.",
+        "Casa Eston is a private boutique stay on the Indian coast with a strong founder-vision and almost no operational backbone. Bookings were on a spreadsheet. The website was a placeholder. The brand existed in the founder’s head. We engaged for ten months across identity, marketing site, and the bespoke operations platform that runs the property today.",
     },
 
     challenge: {
       paragraphs: [
-        "The property needed to feel like an heirloom — slow, serious, written rather than designed. Most hospitality brands lean on stock photography and trend fonts. Halcyon’s founders wanted the opposite: a house that felt private and considered, and a website that signaled that within five seconds.",
+        "The property needed to feel like an heirloom — slow, serious, written rather than designed. Most hospitality brands lean on stock photography and trend fonts. Casa Eston’s founders wanted the opposite: a house that felt private and considered, and a website that signaled that within five seconds.",
         "On the operations side, the team was running bookings, housekeeping, concierge and reporting from a mix of spreadsheets, WhatsApp threads, and three different SaaS tools. Turnover was slipping. Guests were getting booked into the wrong rooms. The founders wanted one system the in-house team could own.",
       ],
     },
@@ -202,7 +218,7 @@ export const CASE_STUDIES: CaseStudy[] = [
       ],
       pillars: [
         {
-          title: "A heirloom-grade brand",
+          title: "An heirloom-grade brand",
           body: "An editorial wordmark, a warm earth palette, photography that frames silence as the product. A brand book the team can keep.",
         },
         {
@@ -219,7 +235,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     systems: {
       items: [
         { name: "Brand identity & book", description: "Wordmark, palette, type system, editorial photography direction." },
-        { name: "Marketing site (halcyon.house)", description: "Image-led, reservation-aware, journal pipeline." },
+        { name: "Marketing site (casaeston.com)", description: "Image-led, reservation-aware, journal pipeline." },
         { name: "Booking engine", description: "Direct reservations, calendar sync, deposit handling." },
         { name: "Concierge console", description: "Pre-arrival enquiries, in-stay requests, post-stay follow-up." },
         { name: "Operations platform", description: "Rooms, turnovers, housekeeping, daily ops dashboard." },
@@ -239,7 +255,7 @@ export const CASE_STUDIES: CaseStudy[] = [
 
     gallery: {
       items: [
-        { kind: "marketing-site", label: "halcyon.house", caption: "Marketing site · home" },
+        { kind: "marketing-site", label: "casaeston.com", caption: "Marketing site · home" },
         { kind: "brand-sheet", label: "Identity sheet", caption: "Wordmark · palette · photography" },
         { kind: "platform-console", label: "Concierge console", caption: "In-stay request management" },
         { kind: "operations-dashboard", label: "Operations · this week", caption: "Calendar · rooms · turnover" },
@@ -252,7 +268,7 @@ export const CASE_STUDIES: CaseStudy[] = [
       quote:
         "We wanted the website and the concierge to feel like the same place. GMS is the only studio we found who treated those as the same problem. The system runs us now — we don’t run the system.",
       author: "Mira S.",
-      role: "Co-founder, Halcyon House",
+      role: "Co-founder, Casa Eston",
     },
 
     closingMetrics: [
@@ -264,8 +280,8 @@ export const CASE_STUDIES: CaseStudy[] = [
   },
 
   {
-    slug: "field-and-form",
-    client: "Field & Form",
+    slug: "petal-and-form",
+    client: "Petal & Form",
     sector: "Editorial Commerce",
     year: "2025",
     status: "Operating",
@@ -274,23 +290,28 @@ export const CASE_STUDIES: CaseStudy[] = [
     duration: "8 months",
     tone: "magenta",
 
+    image: {
+      src: "/mockups/work/petal-and-form.png",
+      alt: "Petal & Form editorial commerce site rendered on laptop and phone",
+    },
+
     hero: {
       eyebrow: "Case study · 03",
       title: "An editorial commerce platform",
       italic: "engineered as a growth system.",
       deck:
-        "A small studio of furniture and lighting makers needed to move from a slow Shopify into something that felt like a magazine — and grew like one.",
+        "A small studio of garment and homeware makers needed to move from a slow Shopify into something that felt like a magazine — and grew like one.",
     },
 
     overview: {
       summary:
-        "Field & Form designs and hand-makes a small catalog of objects in Jaipur. The product is exceptional. The website was a Shopify theme. We rebuilt the brand, the storefront, and the editorial system that drives discovery — all in eight months, with growth running afterward.",
+        "Petal & Form designs and hand-makes a small catalog of garments and lifestyle objects in Jaipur. The product is exceptional. The website was a Shopify theme. We rebuilt the brand, the storefront, and the editorial system that drives discovery — all in eight months, with growth running afterward.",
     },
 
     challenge: {
       paragraphs: [
-        "Field & Form’s objects are bought one at a time, often after a long browse. The original Shopify theme treated them like fast-moving consumer goods: cards, badges, prices stacked on top of each other. The conversion rate was healthy but the average order value was low and repeat rate was almost nothing.",
-        "The founders wanted the website to feel like the journal of a furniture house — long object pages, editorial photography, founder essays — and they wanted the system to compound through search and email instead of paid spend.",
+        "Petal & Form’s pieces are bought one at a time, often after a long browse. The original Shopify theme treated them like fast-moving consumer goods: cards, badges, prices stacked on top of each other. The conversion rate was healthy but the average order value was low and repeat rate was almost nothing.",
+        "The founders wanted the website to feel like the journal of an atelier — long object pages, editorial photography, founder essays — and they wanted the system to compound through search and email instead of paid spend.",
       ],
     },
 
@@ -337,7 +358,7 @@ export const CASE_STUDIES: CaseStudy[] = [
 
     gallery: {
       items: [
-        { kind: "marketing-site", label: "fieldandform.co", caption: "Storefront · object page" },
+        { kind: "marketing-site", label: "petalandform.co", caption: "Storefront · object page" },
         { kind: "editorial-spread", label: "Journal · Vol 12", caption: "Atelier · winter collection" },
         { kind: "brand-sheet", label: "Identity sheet", caption: "Wordmark · palette · type" },
         { kind: "mobile-app", label: "Mobile · object page", caption: "Editorial commerce on phone" },
@@ -350,7 +371,7 @@ export const CASE_STUDIES: CaseStudy[] = [
       quote:
         "GMS shipped a website that made us look like a museum. Then they shipped a growth program that made us profitable. We trust them with both halves of the business now.",
       author: "Rohan V.",
-      role: "Founder, Field & Form",
+      role: "Founder, Petal & Form",
     },
 
     closingMetrics: [

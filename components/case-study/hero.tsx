@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowLeft } from "lucide-react";
 import type { CaseStudy } from "@/lib/case-studies";
@@ -101,12 +102,43 @@ export function CaseStudyHero({ study }: { study: CaseStudy }) {
           </motion.p>
         </div>
 
+        {/* Hero mockup */}
+        <motion.div
+          initial={{ opacity: 0, y: 36 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.4, ease, delay: 0.6 }}
+          className="relative mt-20 overflow-hidden rounded-2xl border border-white/[0.06] bg-ink-900/60 md:mt-28"
+        >
+          <div className="relative aspect-[16/9] w-full">
+            <div
+              aria-hidden
+              className="pointer-events-none absolute inset-0"
+              style={{
+                background:
+                  "radial-gradient(ellipse 80% 100% at 50% 50%, rgba(200,169,107,0.10), rgba(15,17,21,0) 70%)",
+              }}
+            />
+            <Image
+              src={study.image.src}
+              alt={study.image.alt}
+              fill
+              priority
+              sizes="(min-width: 1280px) 1180px, 100vw"
+              className="object-cover object-center"
+            />
+            <div
+              aria-hidden
+              className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/15 to-transparent"
+            />
+          </div>
+        </motion.div>
+
         {/* Meta rail */}
         <motion.div
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease, delay: 0.7 }}
-          className="mt-16 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-white/[0.06] bg-white/[0.05] md:mt-20 md:grid-cols-4"
+          transition={{ duration: 1, ease, delay: 0.8 }}
+          className="mt-10 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-white/[0.06] bg-white/[0.05] md:mt-14 md:grid-cols-4"
         >
           {[
             { l: "Status", v: study.status },
