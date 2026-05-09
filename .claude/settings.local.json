@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install *)",
+      "Bash(npx next *)",
+      "Bash([ -f \"C:\\\\\\\\Users\\\\\\\\Gnani\\\\\\\\AppData\\\\\\\\Local\\\\\\\\Temp\\\\\\\\claude\\\\\\\\C--Users-Gnani-Videos-Gms-test\\\\\\\\71198f4d-191b-4f27-ac21-b04164550fd8\\\\\\\\tasks\\\\\\\\bd23pgiu8.output\" ])",
+      "Bash(grep -q \"First Load JS\\\\|Failed to compile\\\\|Error:\" \"C:\\\\\\\\Users\\\\\\\\Gnani\\\\\\\\AppData\\\\\\\\Local\\\\\\\\Temp\\\\\\\\claude\\\\\\\\C--Users-Gnani-Videos-Gms-test\\\\\\\\71198f4d-191b-4f27-ac21-b04164550fd8\\\\\\\\tasks\\\\\\\\bd23pgiu8.output\")",
+      "PowerShell(npx.cmd next build 2>&1)",
+      "PowerShell(if \\(Test-Path \"C:\\\\Users\\\\Gnani\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-Gnani-Videos-Gms-test\\\\71198f4d-191b-4f27-ac21-b04164550fd8\\\\tasks\\\\br2n6wgzr.output\"\\) { \\(Get-Item \"C:\\\\Users\\\\Gnani\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-Gnani-Videos-Gms-test\\\\71198f4d-191b-4f27-ac21-b04164550fd8\\\\tasks\\\\br2n6wgzr.output\"\\).Length } else { \"no file\" })"
+    ]
+  }
+}
