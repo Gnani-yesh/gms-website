@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowUpRight, Mail, Phone, MapPin, MessageCircle } from "lucide-react";
+import { ArrowUpRight, Mail, Phone, MapPin } from "lucide-react";
 import { SectionAura } from "@/components/site/section-aura";
 
 const ease = [0.16, 1, 0.3, 1] as const;
@@ -245,20 +245,13 @@ function ContactSidebar() {
           <ContactRow
             icon={<Phone className="h-3.5 w-3.5" strokeWidth={1.75} />}
             label="Phone"
-            href="tel:+917780570992"
-            value="+91 77805 70992"
-          />
-          <ContactRow
-            icon={<MessageCircle className="h-3.5 w-3.5" strokeWidth={1.75} />}
-            label="WhatsApp"
-            href="https://wa.me/917780570992"
-            value="+91 77805 70992"
-            external
+            href="tel:+447442559228"
+            value="+44 7442 559228"
           />
           <ContactRow
             icon={<MapPin className="h-3.5 w-3.5" strokeWidth={1.75} />}
             label="Studio"
-            value="Hyderabad, India"
+            value="Swansea, UK"
           />
         </div>
       </div>

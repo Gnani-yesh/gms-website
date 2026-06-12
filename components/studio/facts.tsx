@@ -7,7 +7,7 @@ const ease = [0.16, 1, 0.3, 1] as const;
 
 const FACTS = [
   ["Founded", "2022"],
-  ["Studio", "Hyderabad · IN"],
+  ["Studio", "Swansea, UK / Hyderabad, IN"],
   ["Team", "8"],
   ["Partners · 2026", "9 active"],
   ["Disciplines", "Build · Grow · Brand"],
@@ -24,7 +24,7 @@ export function StudioFacts() {
       <div className="container relative">
         <div className="flex items-center gap-3">
           <span className="font-mono text-[10.5px] uppercase tracking-[0.2em] text-fog-muted">
-            04
+            05
           </span>
           <span className="h-px w-8 bg-gradient-to-r from-white/30 to-transparent" />
           <span className="eyebrow">Studio facts</span>

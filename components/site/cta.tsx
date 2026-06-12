@@ -77,7 +77,7 @@ export function CTA() {
 
             <div className="mt-12 flex flex-col items-center justify-center gap-3 sm:flex-row">
               <Link
-                href="mailto:gnanimarketingsolutions@gmail.com"
+                href="mailto:gnanimarketingsolutions@gmail.com?subject=Start a Project — GMS"
                 className="btn-primary"
               >
                 Start a project
@@ -100,13 +100,13 @@ export function CTA() {
               </a>
               <div className="flex items-center gap-3 font-mono text-[10.5px] uppercase tracking-[0.18em] text-fog-muted">
                 <a
-                  href="tel:+917780570992"
+                  href="tel:+447442559228"
                   className="transition-colors duration-300 hover:text-white"
                 >
-                  +91 77805 70992
+                  +44 7442 559228
                 </a>
                 <span className="h-2.5 w-px bg-white/15" />
-                <span>Hyderabad · IN</span>
+                <span>Swansea · UK</span>
               </div>
             </div>
           </div>

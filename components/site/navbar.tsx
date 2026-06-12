@@ -115,7 +115,7 @@ export function Navbar() {
 
           <div className="flex items-center gap-2">
             <Link
-              href="/start-project"
+              href="mailto:gnanimarketingsolutions@gmail.com?subject=Start a Project — GMS"
               className="btn-primary hidden md:inline-flex"
             >
               Start a project
@@ -190,7 +190,7 @@ export function Navbar() {
                   );
                 })}
                 <Link
-                  href="/start-project"
+                  href="mailto:gnanimarketingsolutions@gmail.com?subject=Start a Project — GMS"
                   onClick={() => setMobileOpen(false)}
                   className="btn-primary mx-2 my-3 justify-center"
                 >

@@ -75,7 +75,7 @@ const SECTIONS: LegalSection[] = [
     heading: "Contact",
     paragraphs: [
       "GMS · Gnani Marketing Solutions · Hyderabad, India.",
-      "Email: gnanimarketingsolutions@gmail.com · Phone: +91 77805 70992.",
+      "Email: gnanimarketingsolutions@gmail.com · Phone: +44 7442 559228.",
     ],
   },
 ];

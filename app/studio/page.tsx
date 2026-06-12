@@ -6,6 +6,7 @@ import { StudioHero } from "@/components/studio/hero";
 import { StudioPhilosophy } from "@/components/studio/philosophy";
 import { StudioPrinciples } from "@/components/studio/principles";
 import { StudioFounder } from "@/components/studio/founder";
+import { StudioTeam } from "@/components/studio/team";
 import { StudioFacts } from "@/components/studio/facts";
 import { StudioCTA } from "@/components/studio/cta";
 
@@ -24,6 +25,7 @@ export default function StudioPage() {
       <StudioPhilosophy />
       <StudioPrinciples />
       <StudioFounder />
+      <StudioTeam />
       <StudioFacts />
       <StudioCTA />
       <Footer />

@@ -57,13 +57,22 @@ export function Hero() {
             systems — the digital infrastructure modern companies depend on.
           </motion.p>
 
+          <motion.p
+            initial={{ opacity: 0, y: 14 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease, delay: 0.45 }}
+            className="mt-6 font-mono text-[10.5px] uppercase tracking-[0.24em] text-fog-muted"
+          >
+            UK &amp; Global · Based in the UK
+          </motion.p>
+
           <motion.div
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease, delay: 0.5 }}
             className="mt-10 flex flex-col items-center justify-center gap-3 sm:mt-12 sm:flex-row"
           >
-            <Link href="/start-project" className="btn-primary">
+            <Link href="mailto:gnanimarketingsolutions@gmail.com?subject=Start a Project — GMS" className="btn-primary">
               Start a project
               <ArrowUpRight className="h-3.5 w-3.5" strokeWidth={2.25} />
             </Link>

@@ -96,7 +96,7 @@ export function CaseStudyNext({ next }: { next: CaseStudy }) {
             ← All case studies
           </Link>
           <Link
-            href="/start-project"
+            href="mailto:gnanimarketingsolutions@gmail.com?subject=Start a Project — GMS"
             className="font-mono text-[10.5px] uppercase tracking-[0.22em] text-white transition-colors duration-300 hover:text-accent"
           >
             Start a project ↗
