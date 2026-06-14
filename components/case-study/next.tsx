@@ -96,7 +96,9 @@ export function CaseStudyNext({ next }: { next: CaseStudy }) {
             ← All case studies
           </Link>
           <Link
-            href="mailto:gnanimarketingsolutions@gmail.com?subject=Start a Project — GMS"
+            href="https://calendly.com/gnanimarketingsolutions/30min"
+            target="_blank"
+            rel="noopener noreferrer"
             className="font-mono text-[10.5px] uppercase tracking-[0.22em] text-white transition-colors duration-300 hover:text-accent"
           >
             Start a project ↗

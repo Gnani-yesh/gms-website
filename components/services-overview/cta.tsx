@@ -16,7 +16,7 @@ export function ServicesCTA() {
       }
       description="Most engagements run across two or three of our disciplines. We start with a 30-minute call to scope the work — no decks, no pitch theater."
       primaryLabel="Start a project"
-      primaryHref="mailto:gnanimarketingsolutions@gmail.com?subject=Start a Project — GMS"
+      primaryHref="https://calendly.com/gnanimarketingsolutions/30min"
       ghostLabel="See how we work"
       ghostHref="/process"
       tone="warm"

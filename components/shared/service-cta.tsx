@@ -27,7 +27,7 @@ export function ServiceCTA({
   title,
   description,
   primaryLabel,
-  primaryHref = "mailto:gnanimarketingsolutions@gmail.com?subject=Start a Project — GMS",
+  primaryHref = "https://calendly.com/gnanimarketingsolutions/30min",
   ghostLabel = "Explore our work",
   ghostHref = "/work",
   tone = "warm",
@@ -95,7 +95,12 @@ export function ServiceCTA({
             </p>
 
             <div className="mt-12 flex flex-col items-center justify-center gap-3 sm:flex-row">
-              <Link href={primaryHref} className="btn-primary">
+              <Link
+                href={primaryHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary"
+              >
                 {primaryLabel}
                 <ArrowUpRight className="h-3.5 w-3.5" strokeWidth={2.25} />
               </Link>

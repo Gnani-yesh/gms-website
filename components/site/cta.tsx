@@ -77,7 +77,9 @@ export function CTA() {
 
             <div className="mt-12 flex flex-col items-center justify-center gap-3 sm:flex-row">
               <Link
-                href="mailto:gnanimarketingsolutions@gmail.com?subject=Start a Project — GMS"
+                href="https://calendly.com/gnanimarketingsolutions/30min"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="btn-primary"
               >
                 Start a project

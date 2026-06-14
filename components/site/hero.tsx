@@ -72,7 +72,7 @@ export function Hero() {
             transition={{ duration: 1, ease, delay: 0.5 }}
             className="mt-10 flex flex-col items-center justify-center gap-3 sm:mt-12 sm:flex-row"
           >
-            <Link href="mailto:gnanimarketingsolutions@gmail.com?subject=Start a Project — GMS" className="btn-primary">
+            <Link href="https://calendly.com/gnanimarketingsolutions/30min" target="_blank" rel="noopener noreferrer" className="btn-primary">
               Start a project
               <ArrowUpRight className="h-3.5 w-3.5" strokeWidth={2.25} />
             </Link>
