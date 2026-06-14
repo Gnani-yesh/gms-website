@@ -149,13 +149,18 @@ export function Navbar() {
         <AnimatePresence>
           {mobileOpen && (
             <motion.div
-              initial={{ opacity: 0, y: -8 }}
+              initial={{ opacity: 1, y: -8 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -8 }}
               transition={{ duration: 0.32, ease: [0.16, 1, 0.3, 1] }}
               className="glass mt-2 overflow-hidden rounded-3xl p-2 md:hidden"
             >
-              <div className="flex flex-col">
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1], delay: 0.06 }}
+                className="flex flex-col"
+              >
                 {[
                   { label: "Services", href: "/services" },
                   { label: "Websites", href: "/services/websites" },
@@ -197,7 +202,7 @@ export function Navbar() {
                   Start a project
                   <ArrowUpRight className="h-3.5 w-3.5" />
                 </Link>
-              </div>
+              </motion.div>
             </motion.div>
           )}
         </AnimatePresence>
@@ -329,7 +334,7 @@ function ServicesDropdown({
               <motion.div
                 key="services-panel"
                 ref={panelRef}
-                initial={{ opacity: 0, y: 8, scale: 0.985 }}
+                initial={{ opacity: 1, y: 8, scale: 0.985 }}
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 exit={{ opacity: 0, y: 6, scale: 0.99 }}
                 transition={{ duration: 0.32, ease: [0.16, 1, 0.3, 1] }}
@@ -356,6 +361,11 @@ function ServicesDropdown({
 function ServicesPanel({ onItemClick }: { onItemClick: () => void }) {
   return (
     <div className="glass-strong w-[660px] overflow-hidden rounded-3xl p-6 shadow-premium">
+      <motion.div
+        initial={{ opacity: 0, y: 3 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1], delay: 0.06 }}
+      >
       <div className="grid grid-cols-3 gap-6">
         {SERVICE_GROUPS.map((group) => (
           <div key={group.label} className="space-y-3">
@@ -407,6 +417,7 @@ function ServicesPanel({ onItemClick }: { onItemClick: () => void }) {
           <ArrowUpRight className="h-3.5 w-3.5" strokeWidth={2.25} />
         </Link>
       </div>
+      </motion.div>
     </div>
   );
 }
