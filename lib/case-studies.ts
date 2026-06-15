@@ -1,26 +1,22 @@
-export type CaseStudyVisual =
-  | "marketing-site"
-  | "platform-console"
-  | "brand-sheet"
-  | "editorial-spread"
-  | "mobile-app"
-  | "operations-dashboard"
-  | "data-card"
-  | "photography";
-
 export type CaseStudy = {
   slug: string;
   client: string;
+  /** Industry */
   sector: string;
   year: string;
-  status: "Live" | "Operating" | "Archived";
+  /** Card + hero label */
+  type: "Case study" | "Concept project";
+  status: "Live" | "Concept";
+  /** Tags / disciplines */
   scope: string[];
-  region: string;
-  duration: string;
+  /** Live site URL (no protocol) */
+  url: string;
+  /** Optional note, e.g. independent concept project */
+  note?: string;
   /** Visual tone for the page accent (warm/cool/magenta). */
   tone: "warm" | "cool" | "magenta";
 
-  /** Cinematic device-render mockup used in hero + index. */
+  /** Real site screenshot used in hero, index and gallery. */
   image: {
     src: string;
     alt: string;
@@ -50,336 +46,283 @@ export type CaseStudy = {
     items: { name: string; description: string }[];
   };
 
-  results: {
-    primary: { metric: string; label: string };
-    secondary: { metric: string; label: string }[];
-  };
-
-  gallery: {
-    items: {
-      kind: CaseStudyVisual;
-      label: string;
-      caption: string;
-    }[];
-  };
-
-  testimonial: {
-    quote: string;
-    author: string;
-    role: string;
-  };
-
-  closingMetrics: { label: string; value: string }[];
+  /** "What this means for you" closing. */
+  takeaway: string;
 };
 
 export const CASE_STUDIES: CaseStudy[] = [
   {
-    slug: "northwave",
-    client: "Northwave",
-    sector: "B2B SaaS",
-    year: "2025 — 26",
-    status: "Operating",
-    scope: ["Brand", "Website", "Platform", "Growth"],
-    region: "Bengaluru · Singapore",
-    duration: "14 months · operating",
+    slug: "happy-herbals",
+    client: "Happy Herbals",
+    sector: "Ayurvedic E-commerce",
+    year: "2024 — 25",
+    type: "Case study",
+    status: "Live",
+    scope: ["Brand", "Website", "Growth", "Ads"],
+    url: "happyherbals.online",
     tone: "warm",
 
     image: {
-      src: "/mockups/work/northwave.png",
-      alt: "Northwave pipeline analytics console rendered on a laptop and phone",
+      src: "/work/happy-herbals.png",
+      alt: "Happy Herbals Ayurvedic e-commerce homepage",
     },
 
     hero: {
       eyebrow: "Case study · 01",
-      title: "Rebuilt brand and a self-serve",
-      italic: "growth engine.",
+      title: "A 15-year Ayurvedic brand,",
+      italic: "finally online.",
       deck:
-        "A founder-led SaaS hit the wall where referrals run out. We rebuilt the brand, the marketing site, and the pipeline as one connected system.",
+        "A 15-year-old Ayurvedic business with hundreds of products and thousands of loyal customers — and zero online presence. We built the whole thing.",
     },
 
     overview: {
       summary:
-        "Northwave is a B2B studio building developer tools for engineering teams. Two years in, they had a strong product, the wrong website, and a brand that looked like every other SaaS in the category. We engaged across brand, website, platform and growth — with the goal of moving the company off founder-led referral and onto an inbound system that compounds.",
+        "Happy Herbals had been selling Ayurvedic medicines for over 15 years — hundreds of products, thousands of loyal customers, all through a physical store.",
     },
 
     challenge: {
       paragraphs: [
-        "Founder-led growth had carried Northwave to roughly $1.4M ARR through LinkedIn, podcasts and warm intros. The marketing site read like a deck. The brand was built in a weekend. Pipeline was tied to one person’s posting cadence, which meant every quiet week meant a quiet month for sales.",
-        "The team needed to move from a brand that the founder defended into a brand the team could operate. They needed a marketing surface that felt as serious as the product, and a measurement layer that would tell leadership whether the next dollar should go into content, paid, or hiring.",
+        "Nothing online. No way for someone to find them on Google, browse their products, or order from home.",
       ],
     },
 
     solution: {
       paragraphs: [
-        "We rebuilt the operating layer in three connected phases — identity, surface, and growth — over fourteen weeks of build and an ongoing operating relationship.",
+        "We built their entire digital presence from scratch.",
+        "First the Shopify store — restructured, rewritten, and designed so customers can actually find what they need and trust what they're buying. Then Meta ad campaigns to bring in new customers consistently, spending lakhs across multiple campaigns to find what works and scale it. Then a WhatsApp system with over 3,200 customers — so the brand can stay in touch, share new products, and bring people back without spending on ads every time.",
+        "Happy Herbals went from zero online presence to a brand that acquires customers, sells products, and communicates with its audience — all digitally.",
       ],
       pillars: [
         {
-          title: "An editorial brand system",
-          body: "A wordmark and palette designed for the long view. Typography that breathes, photography that doesn’t need a caption to land, and a brand book the team actually opens.",
+          title: "Shopify storefront",
+          body: "Restructured, rewritten and redesigned so customers can find what they need — and trust what they're buying.",
         },
         {
-          title: "A platform-grade marketing site",
-          body: "Edge-rendered, sub-second, content-led architecture. Bespoke CMS and editorial pipeline so the team could publish weekly without engineering tickets.",
+          title: "Meta ad campaigns",
+          body: "Consistent new-customer acquisition — lakhs spent across campaigns to find what works and scale it.",
         },
         {
-          title: "A connected growth engine",
-          body: "SEO, paid media, lifecycle and content treated as one system with shared attribution. ROAS, CAC and LTV measured on the same source of truth.",
+          title: "WhatsApp engine",
+          body: "A list of 3,200+ customers, so the brand can share new products and bring people back without paying for ads every time.",
         },
       ],
     },
 
     systems: {
       items: [
-        { name: "Brand identity & guidelines", description: "Wordmark, palette, type system, photography direction." },
-        { name: "Marketing site", description: "Bespoke CMS, edge-rendered, journal pipeline, modular sections." },
-        { name: "Pipeline analytics", description: "Server-side attribution, shared revenue dashboard, weekly reports." },
-        { name: "Paid creative system", description: "Meta + Google creative library, naming convention, performance loop." },
-        { name: "Editorial pipeline", description: "Long-form essays, distribution playbook, content ops calendar." },
-        { name: "Lifecycle CRM", description: "Email sequences, signup-to-trial-to-customer journeys, retention loops." },
+        { name: "Shopify store", description: "Restructured catalog, rewritten product copy, conversion-focused design." },
+        { name: "Meta ad campaigns", description: "Multi-campaign acquisition engine — tested, optimised and scaled." },
+        { name: "WhatsApp broadcast system", description: "3,200+ customer list for new-product drops and re-engagement." },
       ],
     },
 
-    results: {
-      primary: { metric: "+218%", label: "qualified pipeline · year over year" },
-      secondary: [
-        { metric: "4.2×", label: "ROAS · blended paid" },
-        { metric: "−34%", label: "Customer acquisition cost" },
-        { metric: "+62%", label: "Organic search sessions" },
-        { metric: "8.4×", label: "LTV / CAC ratio" },
-      ],
-    },
-
-    gallery: {
-      items: [
-        { kind: "marketing-site", label: "northwave.co", caption: "Marketing site · home" },
-        { kind: "brand-sheet", label: "Brand identity", caption: "Wordmark · palette · type" },
-        { kind: "platform-console", label: "Pipeline analytics", caption: "Internal · revenue dashboard" },
-        { kind: "editorial-spread", label: "Journal · Vol 04", caption: "The economics of brand-led growth" },
-        { kind: "mobile-app", label: "Mobile · home", caption: "Responsive marketing surface" },
-        { kind: "data-card", label: "Q1 · 2026", caption: "Quarterly performance review" },
-      ],
-    },
-
-    testimonial: {
-      quote:
-        "We stopped looking like every other SaaS. The site, the brand, the pipeline — they all started reinforcing each other. It felt like the company finally caught up to the product.",
-      author: "Anita R.",
-      role: "Founder & CEO, Northwave",
-    },
-
-    closingMetrics: [
-      { label: "ARR · current", value: "$4.6M" },
-      { label: "Pipeline · YoY", value: "+218%" },
-      { label: "Engagement", value: "14 months · ongoing" },
-      { label: "Surfaces shipped", value: "06" },
-    ],
+    takeaway:
+      "If you have a business that relies on foot traffic or word of mouth, we can build you the same kind of system — a website that sells, ads that bring people in, and a way to keep them coming back.",
   },
 
   {
-    slug: "casa-eston",
-    client: "Casa Eston",
-    sector: "Hospitality",
-    year: "2024 — 25",
+    slug: "dr-krishna",
+    client: "Dr. Krishna Health",
+    sector: "Healthcare",
+    year: "2025",
+    type: "Case study",
     status: "Live",
-    scope: ["Brand", "Website", "Operations Platform"],
-    region: "Coastal · India",
-    duration: "10 months",
-    tone: "warm",
+    scope: ["Website", "SEO", "Content"],
+    url: "drkrishnahealth.in",
+    tone: "cool",
 
     image: {
-      src: "/mockups/work/casa-eston.png",
-      alt: "Casa Eston villa booking console on laptop, tablet and phone",
+      src: "/work/dr-krishna.png",
+      alt: "Dr. Krishna Health naturopathy website homepage",
     },
 
     hero: {
       eyebrow: "Case study · 02",
-      title: "A villa, not a hotel —",
-      italic: "and the system behind it.",
+      title: "15 years of expertise.",
+      italic: "Now the internet knows about it.",
       deck:
-        "A small coastal villa needed to feel ageless from the marketing site to the concierge. We built the brand, the website and the operating system as one connected piece.",
+        "A naturopathic physician with 15 years of clinical experience and no way for patients to find him online. We changed that.",
     },
 
     overview: {
       summary:
-        "Casa Eston is a private boutique stay on the Indian coast with a strong founder-vision and almost no operational backbone. Bookings were on a spreadsheet. The website was a placeholder. The brand existed in the founder’s head. We engaged for ten months across identity, marketing site, and the bespoke operations platform that runs the property today.",
+        "Dr. Krishna is a naturopathic physician in Hyderabad with 15 years of clinical experience.",
     },
 
     challenge: {
       paragraphs: [
-        "The property needed to feel like an heirloom — slow, serious, written rather than designed. Most hospitality brands lean on stock photography and trend fonts. Casa Eston’s founders wanted the opposite: a house that felt private and considered, and a website that signaled that within five seconds.",
-        "On the operations side, the team was running bookings, housekeeping, concierge and reporting from a mix of spreadsheets, WhatsApp threads, and three different SaaS tools. Turnover was slipping. Guests were getting booked into the wrong rooms. The founders wanted one system the in-house team could own.",
+        "Patients found him through word of mouth alone — because he had no website, no Google presence, nothing.",
+        "People were searching for exactly what he offers. They just couldn't find him.",
       ],
     },
 
     solution: {
       paragraphs: [
-        "We treated the marketing surface and the operations platform as two faces of the same brand. Both ran on the same content model, the same identity system, and the same operational standards.",
+        "We built him a clean, professional website that feels like the practice it represents — no clutter, no gimmicks, just clear information that earns trust. Then we built a content strategy around it — 12 articles targeting the exact searches his potential patients are typing into Google. Each article written in plain language, with real clinical information, structured to rank locally in Hyderabad.",
+        "He's now indexed on Google, his clinics show up on Google Maps, and people who've never heard of him are finding his website, reading his content, and booking consultations.",
       ],
       pillars: [
         {
-          title: "An heirloom-grade brand",
-          body: "An editorial wordmark, a warm earth palette, photography that frames silence as the product. A brand book the team can keep.",
+          title: "A website that earns trust",
+          body: "Clean and professional — no clutter, no gimmicks, just clear information that feels like the practice it represents.",
         },
         {
-          title: "A cinematic marketing site",
-          body: "Edge-rendered, image-heavy without being slow, with reservations and concierge enquiries running through a single intake.",
+          title: "A content strategy",
+          body: "12 articles targeting the exact searches his patients type into Google, in plain language with real clinical detail.",
         },
         {
-          title: "A bespoke operations platform",
-          body: "Bookings, guest profiles, room turnover, concierge requests and reporting unified into one quiet console the team actually uses.",
+          title: "Local SEO",
+          body: "Structured to rank locally — indexed on Google, clinics surfaced on Google Maps, new patients finding him.",
         },
       ],
     },
 
     systems: {
       items: [
-        { name: "Brand identity & book", description: "Wordmark, palette, type system, editorial photography direction." },
-        { name: "Marketing site (casaeston.com)", description: "Image-led, reservation-aware, journal pipeline." },
-        { name: "Booking engine", description: "Direct reservations, calendar sync, deposit handling." },
-        { name: "Concierge console", description: "Pre-arrival enquiries, in-stay requests, post-stay follow-up." },
-        { name: "Operations platform", description: "Rooms, turnovers, housekeeping, daily ops dashboard." },
-        { name: "Reporting layer", description: "Occupancy, RevPAR, ADR, guest cohort views." },
+        { name: "Marketing website", description: "Clean, professional, trust-first information architecture." },
+        { name: "Content library", description: "12 SEO articles targeting real patient search queries." },
+        { name: "Local SEO & Maps", description: "Google indexing and Google Business / Maps presence for Hyderabad." },
       ],
     },
 
-    results: {
-      primary: { metric: "99.4%", label: "on-time room turnover" },
-      secondary: [
-        { metric: "87%", label: "Occupancy · last 12 months" },
-        { metric: "$842", label: "RevPAR · steady-state" },
-        { metric: "$1,210", label: "ADR · in season" },
-        { metric: "+84", label: "Guest NPS · trailing" },
-      ],
-    },
-
-    gallery: {
-      items: [
-        { kind: "marketing-site", label: "casaeston.com", caption: "Marketing site · home" },
-        { kind: "brand-sheet", label: "Identity sheet", caption: "Wordmark · palette · photography" },
-        { kind: "platform-console", label: "Concierge console", caption: "In-stay request management" },
-        { kind: "operations-dashboard", label: "Operations · this week", caption: "Calendar · rooms · turnover" },
-        { kind: "photography", label: "FIG. 04 · ELEV.", caption: "Editorial photography direction" },
-        { kind: "mobile-app", label: "Concierge · mobile", caption: "Front desk handheld interface" },
-      ],
-    },
-
-    testimonial: {
-      quote:
-        "We wanted the website and the concierge to feel like the same place. GMS is the only studio we found who treated those as the same problem. The system runs us now — we don’t run the system.",
-      author: "Mira S.",
-      role: "Co-founder, Casa Eston",
-    },
-
-    closingMetrics: [
-      { label: "Rooms operated", value: "12" },
-      { label: "Occupancy · TTM", value: "87%" },
-      { label: "On-time turnover", value: "99.4%" },
-      { label: "Engagement", value: "10 months · live" },
-    ],
+    takeaway:
+      "If you're a professional or service business that people should be finding on Google but aren't — a website and the right content strategy changes that entirely.",
   },
 
   {
-    slug: "petal-and-form",
-    client: "Petal & Form",
-    sector: "Editorial Commerce",
-    year: "2025",
-    status: "Operating",
-    scope: ["Brand", "Website", "Editorial", "Growth"],
-    region: "Jaipur · London",
-    duration: "8 months",
-    tone: "magenta",
+    slug: "navavarna",
+    client: "Navavarna Infra",
+    sector: "Real Estate",
+    year: "2024",
+    type: "Case study",
+    status: "Live",
+    scope: ["Website", "Brand"],
+    url: "navavarna.com",
+    tone: "warm",
 
     image: {
-      src: "/mockups/work/petal-and-form.png",
-      alt: "Petal & Form editorial commerce site rendered on laptop and phone",
+      src: "/work/navavarna.png",
+      alt: "Navavarna Infra real estate website homepage",
     },
 
     hero: {
       eyebrow: "Case study · 03",
-      title: "An editorial commerce platform",
-      italic: "engineered as a growth system.",
+      title: "Premium properties deserve",
+      italic: "a premium first impression.",
       deck:
-        "A small studio of garment and homeware makers needed to move from a slow Shopify into something that felt like a magazine — and grew like one.",
+        "High-value land and luxury property for serious investors — and a website that had to earn their trust before the first conversation.",
     },
 
     overview: {
       summary:
-        "Petal & Form designs and hand-makes a small catalog of garments and lifestyle objects in Jaipur. The product is exceptional. The website was a Shopify theme. We rebuilt the brand, the storefront, and the editorial system that drives discovery — all in eight months, with growth running afterward.",
+        "Navavarna Infra LLP sells high-value land and property in Hyderabad — farmland communities, open plots near the Outer Ring Road, luxury residential projects. Their buyers are serious investors. First impressions matter enormously.",
     },
 
     challenge: {
       paragraphs: [
-        "Petal & Form’s pieces are bought one at a time, often after a long browse. The original Shopify theme treated them like fast-moving consumer goods: cards, badges, prices stacked on top of each other. The conversion rate was healthy but the average order value was low and repeat rate was almost nothing.",
-        "The founders wanted the website to feel like the journal of an atelier — long object pages, editorial photography, founder essays — and they wanted the system to compound through search and email instead of paid spend.",
+        "They needed a website that communicated the quality of what they sell before a single conversation happened.",
       ],
     },
 
     solution: {
       paragraphs: [
-        "We rebuilt the surface and the growth program together. The website became a journal. The journal became the growth engine. Email did the rest.",
+        "We built a four-page website in dark navy and gold — a design that feels expensive without trying too hard. Property listings laid out clearly with the details serious buyers actually need. A straightforward contact flow so interested investors can reach the team without friction. Everything written in a tone that speaks to someone making a significant financial decision.",
+        "When someone lands on navavarna.com, they know immediately they're dealing with a serious company.",
       ],
       pillars: [
         {
-          title: "An editorial brand system",
-          body: "A wordmark and warm earth palette that reads as quiet luxury. Photography direction shot in studio across the Jaipur catalog.",
+          title: "A premium website",
+          body: "Four pages in dark navy and gold — a design that feels expensive without trying too hard.",
         },
         {
-          title: "An editorial commerce platform",
-          body: "Long-form object pages, atelier journal, headless commerce, member accounts, repeat-buyer flows.",
+          title: "Clear property listings",
+          body: "Laid out with the details serious buyers actually need to make a decision.",
         },
         {
-          title: "Compounding distribution",
-          body: "SEO program around object categories, weekly journal cadence, lifecycle email driving repeat purchase.",
+          title: "A frictionless contact flow",
+          body: "So interested investors can reach the team without getting in their own way.",
         },
       ],
     },
 
     systems: {
       items: [
-        { name: "Brand identity & book", description: "Wordmark, palette, type system, editorial photography direction." },
-        { name: "Editorial commerce site", description: "Long-form object pages, atelier journal, member portal." },
-        { name: "Headless commerce layer", description: "Catalog, cart, checkout, payments, fulfillment integration." },
-        { name: "Journal pipeline", description: "Editorial cadence, distribution playbook, archival system." },
-        { name: "SEO infrastructure", description: "Topical authority program, schema, internal linking." },
-        { name: "Lifecycle email", description: "Welcome, abandonment, post-purchase, journal weekly." },
+        { name: "Four-page website", description: "Dark navy and gold identity, built to read as premium." },
+        { name: "Property listings", description: "Clear layouts with the details serious buyers need." },
+        { name: "Enquiry flow", description: "Straightforward contact path for high-intent investors." },
       ],
     },
 
-    results: {
-      primary: { metric: "+312%", label: "annual revenue · year over year" },
-      secondary: [
-        { metric: "+58%", label: "Average order value" },
-        { metric: "44%", label: "Repeat rate · TTM" },
-        { metric: "$2.10", label: "Email RPM · trailing" },
-        { metric: "+184%", label: "Organic search · YoY" },
+    takeaway:
+      "If your business operates at a premium level but your website doesn't reflect that — you're losing clients before they've even spoken to you.",
+  },
+
+  {
+    slug: "meltd",
+    client: "MELTD",
+    sector: "F&B",
+    year: "2025",
+    type: "Concept project",
+    status: "Concept",
+    scope: ["Website", "Brand"],
+    url: "meltd.netlify.app",
+    note: "Independent concept project",
+    tone: "magenta",
+
+    image: {
+      src: "/work/meltd.png",
+      alt: "MELTD milkshake brand website homepage",
+    },
+
+    hero: {
+      eyebrow: "Concept project · 04",
+      title: "A milkshake brand built to be",
+      italic: "scrolled, shared, and ordered from.",
+      deck:
+        "A milkshake brand concept built to be photographed before it's tasted — and ordered before you've finished scrolling.",
+    },
+
+    overview: {
+      summary:
+        "MELTD is a milkshake brand concept built around bold flavours and a visual identity that makes people want to take a photo before they take a sip.",
+    },
+
+    challenge: {
+      paragraphs: [
+        "The brief was simple — build a website that feels as good as the product tastes. Something that makes you want to order before you've finished scrolling.",
       ],
     },
 
-    gallery: {
+    solution: {
+      paragraphs: [
+        "We built a product-first site that leads with visuals, keeps copy minimal, and makes the path from “I want this” to “I've ordered it” as short as possible. Fast, mobile-first, designed for a generation that decides in three seconds whether something is worth their attention.",
+      ],
+      pillars: [
+        {
+          title: "Product-first design",
+          body: "Leads with visuals and keeps copy minimal — built to be scrolled and shared.",
+        },
+        {
+          title: "A short path to order",
+          body: "From “I want this” to “I've ordered it” in as few steps as possible.",
+        },
+        {
+          title: "Fast and mobile-first",
+          body: "Designed for a generation that decides in three seconds whether something is worth their attention.",
+        },
+      ],
+    },
+
+    systems: {
       items: [
-        { kind: "marketing-site", label: "petalandform.co", caption: "Storefront · object page" },
-        { kind: "editorial-spread", label: "Journal · Vol 12", caption: "Atelier · winter collection" },
-        { kind: "brand-sheet", label: "Identity sheet", caption: "Wordmark · palette · type" },
-        { kind: "mobile-app", label: "Mobile · object page", caption: "Editorial commerce on phone" },
-        { kind: "platform-console", label: "Commerce admin", caption: "Catalog · orders · members" },
-        { kind: "photography", label: "FIG. 04 · STUDIO", caption: "Editorial product photography" },
+        { name: "Product-first website", description: "Visual-led layout with minimal, punchy copy." },
+        { name: "Order flow", description: "Shortest possible path from interest to order." },
+        { name: "Mobile-first build", description: "Fast, responsive, designed for quick decisions." },
       ],
     },
 
-    testimonial: {
-      quote:
-        "GMS shipped a website that made us look like a museum. Then they shipped a growth program that made us profitable. We trust them with both halves of the business now.",
-      author: "Rohan V.",
-      role: "Founder, Petal & Form",
-    },
-
-    closingMetrics: [
-      { label: "Revenue · YoY", value: "+312%" },
-      { label: "Repeat rate", value: "44%" },
-      { label: "Engagement", value: "8 months · operating" },
-      { label: "Surfaces shipped", value: "06" },
-    ],
+    takeaway:
+      "If you're in food, retail, or any product business — your website is your shopfront. We build ones people actually want to spend time on.",
   },
 ];
 

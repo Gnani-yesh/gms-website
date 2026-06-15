@@ -10,10 +10,7 @@ import { CaseStudyOverview } from "@/components/case-study/overview";
 import { CaseStudyChallenge } from "@/components/case-study/challenge";
 import { CaseStudySolution } from "@/components/case-study/solution";
 import { CaseStudySystems } from "@/components/case-study/systems";
-import { CaseStudyResults } from "@/components/case-study/results";
 import { CaseStudyGallery } from "@/components/case-study/gallery";
-import { CaseStudyTestimonial } from "@/components/case-study/testimonial";
-import { CaseStudyMetrics } from "@/components/case-study/metrics";
 import { CaseStudyNext } from "@/components/case-study/next";
 
 export function generateStaticParams() {
@@ -58,10 +55,7 @@ export default function CaseStudyPage({
       <CaseStudyChallenge study={study} />
       <CaseStudySolution study={study} />
       <CaseStudySystems study={study} />
-      <CaseStudyResults study={study} />
       <CaseStudyGallery study={study} />
-      <CaseStudyTestimonial study={study} />
-      <CaseStudyMetrics study={study} />
       <CaseStudyNext next={next} />
       <Footer />
     </main>

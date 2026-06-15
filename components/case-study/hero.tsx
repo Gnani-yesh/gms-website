@@ -142,8 +142,8 @@ export function CaseStudyHero({ study }: { study: CaseStudy }) {
         >
           {[
             { l: "Status", v: study.status },
-            { l: "Region", v: study.region },
-            { l: "Engagement", v: study.duration },
+            { l: "Year", v: study.year },
+            { l: "Website", v: study.url },
             { l: "Disciplines", v: study.scope.join(" · ") },
           ].map((m) => (
             <div key={m.l} className="bg-ink-900/80 p-7 md:p-8">

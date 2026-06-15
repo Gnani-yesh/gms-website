@@ -66,7 +66,7 @@ function CaseRow({
           <div className="flex items-center gap-3 font-mono text-[10.5px] uppercase tracking-[0.22em] text-fog-muted">
             <span>{String(index + 1).padStart(2, "0")}</span>
             <span className="h-px w-8 bg-gradient-to-r from-white/30 to-transparent" />
-            <span>{index === 0 ? "Featured" : "Case study"}</span>
+            <span>{c.type}</span>
           </div>
 
           <h2 className="mt-5 max-w-[460px] font-display text-[28px] font-medium leading-[1.1] tracking-tight-display text-balance md:text-[34px] lg:text-[40px]">
@@ -86,12 +86,9 @@ function CaseRow({
             {c.scope.join(" · ")}
           </div>
 
-          <div className="mt-7 flex items-baseline gap-3 border-t border-white/[0.05] pt-5">
-            <span className="font-display text-[36px] font-medium leading-none tracking-tightest text-accent md:text-[44px]">
-              {c.results.primary.metric}
-            </span>
-            <span className="text-[12.5px] text-fog-muted">
-              {c.results.primary.label}
+          <div className="mt-7 flex items-center gap-3 border-t border-white/[0.05] pt-5">
+            <span className="font-mono text-[10.5px] uppercase tracking-[0.22em] text-fog">
+              View case study
             </span>
             <ArrowUpRight
               className="ml-auto h-5 w-5 text-fog-muted transition-all duration-500 group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-white"

@@ -70,6 +70,20 @@ export function CaseStudySolution({ study }: { study: CaseStudy }) {
             </motion.div>
           ))}
         </div>
+
+        {/* What this means for you */}
+        <motion.div
+          initial={{ opacity: 0, y: 22 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.95, ease }}
+          className="mt-12 rounded-2xl border border-white/[0.06] bg-ink-900/60 p-9 md:mt-16 md:p-12"
+        >
+          <div className="eyebrow">What this means for you</div>
+          <p className="mt-5 max-w-[760px] font-display text-[20px] font-medium leading-[1.4] tracking-tight-display text-balance text-white md:text-[26px]">
+            {study.takeaway}
+          </p>
+        </motion.div>
       </div>
     </section>
   );

@@ -70,12 +70,9 @@ export function CaseStudyNext({ next }: { next: CaseStudy }) {
                     {next.hero.italic}
                   </span>
                 </h3>
-                <div className="mt-8 flex items-baseline gap-3 border-t border-white/[0.05] pt-6">
-                  <span className="font-display text-[28px] font-medium leading-none tracking-tightest text-accent md:text-[34px]">
-                    {next.results.primary.metric}
-                  </span>
-                  <span className="text-[12.5px] text-fog-muted">
-                    {next.results.primary.label}
+                <div className="mt-8 flex items-center gap-3 border-t border-white/[0.05] pt-6">
+                  <span className="font-mono text-[10.5px] uppercase tracking-[0.22em] text-fog">
+                    View case study
                   </span>
                   <ArrowUpRight
                     className="ml-auto h-5 w-5 text-fog-muted transition-all duration-500 group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-white"

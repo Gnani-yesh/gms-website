@@ -12,58 +12,53 @@ type CaseStudy = {
   sector: string;
   year: string;
   title: string;
-  metric: string;
-  metricLabel: string;
+  slug: string;
   image: { src: string; alt: string };
 };
 
 const CASES: CaseStudy[] = [
   {
-    client: "Northwave",
-    sector: "B2B SaaS",
-    year: "2025 — 26",
-    title: "Rebuilt brand and full marketing platform",
-    metric: "+218%",
-    metricLabel: "qualified pipeline · YoY",
-    image: {
-      src: "/mockups/home/northwave-group.png",
-      alt: "Northwave dashboard rendered on a laptop and phone",
-    },
-  },
-  {
-    client: "Atelier Studio",
-    sector: "Architecture",
-    year: "2025",
-    title: "Cinematic portfolio engineered for taste",
-    metric: "4.2×",
-    metricLabel: "inbound enquiries",
-    image: {
-      src: "/mockups/home/atelier-studio.png",
-      alt: "Atelier Studio editorial site rendered on laptop and tablet",
-    },
-  },
-  {
-    client: "Halcyon Capital",
-    sector: "Private Markets",
+    client: "Happy Herbals",
+    sector: "Ayurvedic E-commerce",
     year: "2024 — 25",
-    title: "Investor portal and content infrastructure",
-    metric: "84%",
-    metricLabel: "lower acquisition cost",
+    title: "A 15-year Ayurvedic brand, finally online.",
+    slug: "happy-herbals",
     image: {
-      src: "/mockups/home/halcyon-capital.png",
-      alt: "Halcyon Capital investor dashboard rendered on laptop and tablet",
+      src: "/work/happy-herbals.png",
+      alt: "Happy Herbals Ayurvedic e-commerce homepage",
     },
   },
   {
-    client: "Lumen Goods",
-    sector: "Editorial Commerce",
+    client: "Dr. Krishna Health",
+    sector: "Healthcare",
     year: "2025",
-    title: "Editorial commerce platform and growth system",
-    metric: "+312%",
-    metricLabel: "annual revenue",
+    title: "15 years of expertise. Now the internet knows about it.",
+    slug: "dr-krishna",
     image: {
-      src: "/mockups/home/lumen-goods.png",
-      alt: "Lumen Goods storefront rendered on laptop and phone",
+      src: "/work/dr-krishna.png",
+      alt: "Dr. Krishna Health naturopathy website homepage",
+    },
+  },
+  {
+    client: "Navavarna Infra",
+    sector: "Real Estate",
+    year: "2024",
+    title: "Premium properties deserve a premium first impression.",
+    slug: "navavarna",
+    image: {
+      src: "/work/navavarna.png",
+      alt: "Navavarna Infra real estate website homepage",
+    },
+  },
+  {
+    client: "MELTD",
+    sector: "F&B",
+    year: "2025",
+    title: "A milkshake brand built to be scrolled, shared, and ordered from.",
+    slug: "meltd",
+    image: {
+      src: "/work/meltd.png",
+      alt: "MELTD milkshake brand website homepage",
     },
   },
 ];
@@ -113,7 +108,7 @@ export function Work() {
               }}
             >
               <Link
-                href="/work"
+                href={`/work/${c.slug}`}
                 className="lift group relative block overflow-hidden rounded-2xl border border-white/[0.06] bg-ink-900/80 hover:border-white/[0.10]"
               >
                 <CaseVisual image={c.image} priority={i < 2} />
@@ -136,13 +131,14 @@ export function Work() {
                     />
                   </div>
 
-                  <div className="mt-7 flex items-baseline gap-3 border-t border-white/[0.06] pt-5">
-                    <span className="font-display text-[26px] font-medium tracking-tightest text-accent">
-                      {c.metric}
+                  <div className="mt-7 flex items-center gap-3 border-t border-white/[0.06] pt-5">
+                    <span className="font-mono text-[10.5px] uppercase tracking-[0.22em] text-fog">
+                      View case study
                     </span>
-                    <span className="text-[12.5px] text-fog-muted">
-                      {c.metricLabel}
-                    </span>
+                    <ArrowUpRight
+                      className="ml-auto h-4 w-4 text-fog-muted transition-all duration-500 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-white"
+                      strokeWidth={1.75}
+                    />
                   </div>
                 </div>
               </Link>
