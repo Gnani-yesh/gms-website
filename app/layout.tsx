@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   title: "GMS — Gnani Marketing Solutions",
   description:
     "GMS builds premium websites, custom platforms, and digital growth systems for ambitious modern businesses.",
-  metadataBase: new URL("https://gms.studio"),
+  metadataBase: new URL("https://www.gnanimarketing.com"),
   openGraph: {
     title: "GMS — Gnani Marketing Solutions",
     description:

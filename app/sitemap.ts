@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { CASE_STUDIES } from "@/lib/case-studies";
 
 // Keep in sync with metadataBase in app/layout.tsx.
-const BASE = "https://gms.studio";
+const BASE = "https://www.gnanimarketing.com";
 
 // Public, linked routes. /start-project is intentionally omitted —
 // it exists but is unlinked, so it stays out of the sitemap.

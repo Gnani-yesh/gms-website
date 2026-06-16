@@ -19,9 +19,9 @@ const SERVICES = [
 ];
 
 const SOCIAL = [
-  { label: "Instagram", href: "#" },
-  { label: "LinkedIn", href: "#" },
-  { label: "X", href: "#" },
+  { label: "Instagram", href: "https://www.instagram.com/gnanimarketing/" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/gnani-marketing-solutions-8329b33a3/" },
+  { label: "YouTube", href: "https://www.youtube.com/@GnaniMarketingSolutions" },
 ];
 
 export function Footer() {

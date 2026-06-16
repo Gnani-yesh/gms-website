@@ -55,7 +55,7 @@ function GrowthPreview() {
         className="glass-strong relative w-full overflow-hidden rounded-2xl shadow-premium ring-1 ring-white/[0.05]"
         style={{ aspectRatio: "16 / 10" }}
       >
-        <ChromeBar url="growth.gms.studio/northwave" />
+        <ChromeBar url="growth.gnanimarketing.com/northwave" />
 
         <div className="relative flex h-[calc(100%-44px)] flex-col">
           {/* Header */}
