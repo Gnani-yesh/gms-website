@@ -28,7 +28,7 @@ export function CaseStudyNext({ next }: { next: CaseStudy }) {
             <div className="grid grid-cols-1 gap-10 md:grid-cols-12">
               {/* Mockup preview */}
               <div className="relative md:col-span-5">
-                <div className="relative aspect-[16/10] overflow-hidden md:h-full">
+                <div className="relative aspect-[1918/993] overflow-hidden">
                   <div
                     aria-hidden
                     className="pointer-events-none absolute inset-0"

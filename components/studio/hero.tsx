@@ -60,7 +60,7 @@ export function StudioHero() {
             <span className="h-6 w-px bg-gradient-to-b from-white/15 to-transparent" />
             <div className="flex flex-wrap items-center justify-center gap-3 font-mono text-[10px] uppercase tracking-[0.24em] text-fog-muted">
               <span className="h-1 w-1 rounded-full bg-fog-muted/70" />
-              <span>Hyderabad · IN</span>
+              <span>Swansea, UK · Hyderabad, IN</span>
               <span className="h-1 w-1 rounded-full bg-fog-muted/70" />
               <span>Established MMXXII</span>
               <span className="h-1 w-1 rounded-full bg-fog-muted/70" />

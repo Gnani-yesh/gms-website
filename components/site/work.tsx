@@ -161,7 +161,7 @@ function CaseVisual({
   priority?: boolean;
 }) {
   return (
-    <div className="relative aspect-[16/10] overflow-hidden bg-ink-900">
+    <div className="relative aspect-[1918/993] overflow-hidden bg-ink-900">
       {/* Subtle ambient warmth behind the image */}
       <div
         aria-hidden

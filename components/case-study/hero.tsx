@@ -109,7 +109,7 @@ export function CaseStudyHero({ study }: { study: CaseStudy }) {
           transition={{ duration: 1.4, ease, delay: 0.6 }}
           className="relative mt-20 overflow-hidden rounded-2xl border border-white/[0.06] bg-ink-900/60 md:mt-28"
         >
-          <div className="relative aspect-[16/9] w-full">
+          <div className="relative aspect-[1918/993] w-full">
             <div
               aria-hidden
               className="pointer-events-none absolute inset-0"
@@ -140,18 +140,31 @@ export function CaseStudyHero({ study }: { study: CaseStudy }) {
           transition={{ duration: 1, ease, delay: 0.8 }}
           className="mt-10 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-white/[0.06] bg-white/[0.05] md:mt-14 md:grid-cols-4"
         >
-          {[
-            { l: "Status", v: study.status },
-            { l: "Year", v: study.year },
-            { l: "Website", v: study.url },
-            { l: "Disciplines", v: study.scope.join(" · ") },
-          ].map((m) => (
+          {(
+            [
+              { l: "Status", v: study.status },
+              { l: "Year", v: study.year },
+              { l: "Website", v: study.url, href: `https://${study.url}` },
+              { l: "Disciplines", v: study.scope.join(" · ") },
+            ] as { l: string; v: string; href?: string }[]
+          ).map((m) => (
             <div key={m.l} className="bg-ink-900/80 p-7 md:p-8">
               <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-fog-muted">
                 {m.l}
               </div>
               <div className="mt-2 font-display text-[15px] font-medium tracking-tight-display text-white md:text-[16.5px]">
-                {m.v}
+                {m.href ? (
+                  <a
+                    href={m.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="transition-colors duration-300 hover:text-accent"
+                  >
+                    {m.v}
+                  </a>
+                ) : (
+                  m.v
+                )}
               </div>
             </div>
           ))}

@@ -8,7 +8,7 @@ import { ContactPanel } from "@/components/contact/panel";
 export const metadata: Metadata = {
   title: "Contact — GMS",
   description:
-    "Start a project with GMS. Hyderabad-based studio working with a small number of partners each year on websites, platforms, brands and growth.",
+    "Start a project with GMS — a UK & India digital studio working with a small number of partners each year on websites, platforms, brands and growth.",
 };
 
 export default function ContactPage() {

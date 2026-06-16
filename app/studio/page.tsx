@@ -13,7 +13,7 @@ import { StudioCTA } from "@/components/studio/cta";
 export const metadata: Metadata = {
   title: "Studio — GMS",
   description:
-    "GMS is a digital infrastructure and growth studio based in Hyderabad. Our philosophy, standards and approach to building for ambitious modern brands.",
+    "GMS is a digital infrastructure and growth studio based in Swansea, UK and Hyderabad, India. Our philosophy, standards and approach to building for ambitious modern brands.",
 };
 
 export default function StudioPage() {

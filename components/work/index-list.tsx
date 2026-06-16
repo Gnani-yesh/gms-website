@@ -109,7 +109,7 @@ function CaseVisual({
   priority?: boolean;
 }) {
   return (
-    <div className="lift relative aspect-[16/10] overflow-hidden rounded-2xl border border-white/[0.06] bg-ink-900/60 transition-colors duration-500 group-hover:border-white/[0.10]">
+    <div className="lift relative aspect-[1918/993] overflow-hidden rounded-2xl border border-white/[0.06] bg-ink-900/60 transition-colors duration-500 group-hover:border-white/[0.10]">
       {/* Ambient warmth behind */}
       <div
         aria-hidden

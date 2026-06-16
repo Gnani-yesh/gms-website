@@ -37,7 +37,7 @@ export function CaseStudyGallery({ study }: { study: CaseStudy }) {
           className="lift relative mt-16 overflow-hidden rounded-2xl border border-white/[0.06] bg-ink-900/40 md:mt-20"
         >
           <div className="p-3 md:p-4">
-            <div className="relative aspect-[16/9] w-full overflow-hidden rounded-xl ring-1 ring-white/[0.05]">
+            <div className="relative aspect-[1918/993] w-full overflow-hidden rounded-xl ring-1 ring-white/[0.05]">
               <div
                 aria-hidden
                 className="pointer-events-none absolute inset-0 z-10"
@@ -63,11 +63,23 @@ export function CaseStudyGallery({ study }: { study: CaseStudy }) {
             <div className="flex items-center gap-2.5 font-mono text-[10px] uppercase tracking-[0.18em] text-fog-muted">
               <span className="text-fog">FIG. 01</span>
               <span className="h-2.5 w-px bg-white/15" />
-              <span>{study.url}</span>
+              <a
+                href={`https://${study.url}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-colors duration-300 hover:text-white"
+              >
+                {study.url}
+              </a>
             </div>
-            <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-fog-muted">
+            <a
+              href={`https://${study.url}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-mono text-[10px] uppercase tracking-[0.18em] text-fog-muted transition-colors duration-300 hover:text-white"
+            >
               {study.status === "Concept" ? "Concept ↗" : "Live ↗"}
-            </span>
+            </a>
           </figcaption>
         </motion.figure>
       </div>
