@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { Instagram, Linkedin, Youtube } from "lucide-react";
 import { Logo } from "./logo";
 
 const STUDIO = [
@@ -19,9 +20,9 @@ const SERVICES = [
 ];
 
 const SOCIAL = [
-  { label: "Instagram", href: "https://www.instagram.com/gnanimarketing/" },
-  { label: "LinkedIn", href: "https://www.linkedin.com/in/gnani-marketing-solutions-8329b33a3/" },
-  { label: "YouTube", href: "https://www.youtube.com/@GnaniMarketingSolutions" },
+  { label: "Instagram", href: "https://www.instagram.com/gnanimarketing/", icon: Instagram },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/gnani-marketing-solutions-8329b33a3/", icon: Linkedin },
+  { label: "YouTube", href: "https://www.youtube.com/@GnaniMarketingSolutions", icon: Youtube },
 ];
 
 export function Footer() {
@@ -78,18 +79,25 @@ export function Footer() {
               <li className="pt-1">
                 <div className="eyebrow mt-2">Social</div>
               </li>
-              {SOCIAL.map((i) => (
-                <li key={i.label}>
-                  <Link
-                    href={i.href}
-                    className="footer-link"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {i.label}
-                  </Link>
-                </li>
-              ))}
+              <li>
+                <div className="mt-3 flex items-center gap-4">
+                  {SOCIAL.map((i) => {
+                    const Icon = i.icon;
+                    return (
+                      <Link
+                        key={i.label}
+                        href={i.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={i.label}
+                        className="text-fog-muted transition-colors duration-300 hover:text-white"
+                      >
+                        <Icon className="h-[18px] w-[18px]" strokeWidth={1.75} />
+                      </Link>
+                    );
+                  })}
+                </div>
+              </li>
             </ul>
           </div>
 
