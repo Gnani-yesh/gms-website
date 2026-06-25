@@ -37,9 +37,9 @@ export function ServicesHero() {
             transition={{ duration: 1.2, ease, delay: 0.15 }}
             className="font-display text-display-xl font-medium text-balance"
           >
-            Three disciplines.
+            Websites, growth and branding,
             <br />
-            One operating system.
+            from one team.
           </motion.h1>
 
           <motion.p
@@ -48,9 +48,8 @@ export function ServicesHero() {
             transition={{ duration: 1, ease, delay: 0.35 }}
             className="mx-auto mt-7 max-w-[640px] text-pretty text-[15.5px] leading-[1.6] text-fog sm:mt-9 sm:text-[16px] md:text-[17.5px]"
           >
-            We build the digital surfaces, operate the growth programs, and
-            design the brand systems behind ambitious modern businesses — as
-            one connected practice, not three retainers.
+            We build your website, run your growth, and shape your brand — as
+            one team that talks to each other, not three separate agencies.
           </motion.p>
 
           <motion.div

@@ -37,9 +37,9 @@ export function WebsitesHero() {
             transition={{ duration: 1.2, ease, delay: 0.15 }}
             className="font-display text-display-xl font-medium text-balance"
           >
-            Websites built
+            Websites that actually work for your business.
             <br />
-            like infrastructure.
+            Not a template.
           </motion.h1>
 
           <motion.p
@@ -48,8 +48,8 @@ export function WebsitesHero() {
             transition={{ duration: 1, ease, delay: 0.35 }}
             className="mx-auto mt-7 max-w-[600px] text-pretty text-[15.5px] leading-[1.6] text-fog sm:mt-9 sm:text-[16px] md:text-[17.5px]"
           >
-            We design and engineer premium websites — fast, expressive,
-            SEO-ready, conversion-focused, and built to age well.
+            Fast, clean, built to convert — and made to fit your business
+            specifically, not a one-size-fits-all theme.
           </motion.p>
 
           <motion.div

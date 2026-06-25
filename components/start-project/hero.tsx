@@ -41,9 +41,9 @@ export function StartProjectHero() {
             transition={{ duration: 1.2, ease, delay: 0.15 }}
             className="font-display text-display-xl font-medium text-balance"
           >
-            Begin the
+            Let&apos;s start
             <br />
-            engagement.
+            your project.
           </motion.h1>
 
           <motion.p
@@ -52,9 +52,8 @@ export function StartProjectHero() {
             transition={{ duration: 1, ease, delay: 0.35 }}
             className="mx-auto mt-7 max-w-[600px] text-pretty text-[15.5px] leading-[1.6] text-fog sm:mt-9 sm:text-[16px] md:text-[17.5px]"
           >
-            Tell us about the company, the work, and the standard you&apos;re
-            holding it to. We respond to every enquiry within two business days
-            with a 30-minute call.
+            Tell us about your business and what you need. We reply within two
+            business days and start with a quick 30-minute call.
           </motion.p>
         </div>
       </div>

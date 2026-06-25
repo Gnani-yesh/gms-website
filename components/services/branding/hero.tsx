@@ -17,8 +17,8 @@ export function BrandingHero() {
       }
       description={
         <>
-          Identity, creative direction, photography and editorial systems —
-          built as the visual backbone of companies with a long view.
+          Identity, creative direction and photography that make your business
+          look as good as it actually is.
         </>
       }
       primaryLabel="Start a brand"

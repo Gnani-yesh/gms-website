@@ -45,9 +45,9 @@ export function StudioHero() {
             transition={{ duration: 1, ease, delay: 0.35 }}
             className="mx-auto mt-7 max-w-[620px] text-pretty text-[15.5px] leading-[1.6] text-fog sm:mt-9 sm:text-[16px] md:text-[17.5px]"
           >
-            GMS is a digital infrastructure and growth studio. We design,
-            engineer and operate websites, platforms, brand systems and growth
-            programs for a small number of ambitious partners.
+            A small team that designs, builds and runs websites, branding and
+            growth for a handful of clients each year. Done properly, not at
+            scale.
           </motion.p>
 
           {/* Studio anchor */}

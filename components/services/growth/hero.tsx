@@ -11,15 +11,15 @@ export function GrowthHero() {
       serviceLabel="Growth"
       title={
         <>
-          Growth as
+          Growth that brings in customers,
           <br />
-          connected infrastructure.
+          not just traffic.
         </>
       }
       description={
         <>
-          SEO, paid media, content and social — engineered as one system that
-          compounds, rather than four retainers running in parallel.
+          SEO, paid media, content and social — run as one system that builds
+          on itself, not four separate retainers.
         </>
       }
       primaryLabel="Start with growth"

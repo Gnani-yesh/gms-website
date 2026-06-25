@@ -22,9 +22,9 @@ export function Hero() {
             transition={{ duration: 1.2, ease, delay: 0.15 }}
             className="font-display text-display-xl font-medium text-balance"
           >
-            Digital infrastructure
+            Websites and growth systems, built properly.
             <br />
-            for ambitious businesses.
+            Not templated.
           </motion.h1>
 
           <motion.p
@@ -33,8 +33,8 @@ export function Hero() {
             transition={{ duration: 1, ease, delay: 0.35 }}
             className="mx-auto mt-7 max-w-[600px] text-pretty text-[15.5px] leading-[1.6] text-fog sm:mt-9 sm:text-[16px] md:text-[17.5px]"
           >
-            GMS designs and builds premium websites, custom platforms and growth
-            systems — the digital infrastructure modern companies depend on.
+            GMS designs and builds custom websites, branding, and growth
+            systems for businesses who want it done properly.
           </motion.p>
 
           <motion.p

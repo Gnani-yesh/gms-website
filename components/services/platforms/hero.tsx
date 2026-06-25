@@ -11,16 +11,15 @@ export function PlatformsHero() {
       serviceLabel="Platforms"
       title={
         <>
-          Operations
+          Custom platforms,
           <br />
-          engineered like infrastructure.
+          built around how you actually work.
         </>
       }
       description={
         <>
-          Custom platforms, internal tools and operational systems — built as
-          compounding infrastructure your team can own, extend, and run for
-          years without rewriting.
+          Internal tools and operational systems your team can own and
+          actually use — built around your workflow, not forced onto it.
         </>
       }
       primaryLabel="Start a platform"

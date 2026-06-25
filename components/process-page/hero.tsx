@@ -48,8 +48,8 @@ export function ProcessHero() {
             transition={{ duration: 1, ease, delay: 0.35 }}
             className="mx-auto mt-7 max-w-[640px] text-pretty text-[15.5px] leading-[1.6] text-fog sm:mt-9 sm:text-[16px] md:text-[17.5px]"
           >
-            The operating model behind every engagement. Six stages — three to
-            build, three to operate — designed to compound past the launch.
+            How every project actually runs. Six steps — three to build it,
+            three to keep it growing after launch.
           </motion.p>
 
           {/* Anchor */}

@@ -49,9 +49,8 @@ export function ContactHero() {
             transition={{ duration: 1, ease, delay: 0.35 }}
             className="mx-auto mt-7 max-w-[600px] text-pretty text-[15.5px] leading-[1.6] text-fog sm:mt-9 sm:text-[16px] md:text-[17.5px]"
           >
-            We respond to every enquiry within two business days. Most
-            engagements begin with a 30-minute call to understand the work
-            before either side commits.
+            We reply to every message within two business days. Most projects
+            start with a quick 30-minute call to understand the work.
           </motion.p>
         </div>
       </div>
