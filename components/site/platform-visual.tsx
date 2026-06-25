@@ -253,7 +253,7 @@ function CentralCard() {
         <div className="flex items-center gap-2 rounded-full border border-white/[0.05] bg-white/[0.02] px-3 py-1">
           <span className="h-1 w-1 rounded-full bg-emerald-400/80" />
           <span className="font-mono text-[9.5px] tracking-wider text-fog-muted">
-            northwave.co
+            happyherbals.online
           </span>
         </div>
         <div className="flex items-center gap-1">
@@ -267,7 +267,7 @@ function CentralCard() {
       <div className="relative flex h-[calc(100%-44px)] flex-col px-5 py-4 sm:px-7 sm:py-5 lg:px-10 lg:py-7">
         <div className="flex items-center justify-between">
           <span className="font-display text-[11.5px] font-medium tracking-tight-display text-white sm:text-[12.5px]">
-            Northwave
+            Happy Herbals
           </span>
           <div className="flex items-center gap-2.5 sm:gap-3.5">
             {["WORK", "STUDIO", "JOURNAL", "CONTACT"].map((n) => (
@@ -342,7 +342,7 @@ function BrandingCard() {
 
       <div className="mt-3 flex items-center justify-between rounded-md border border-white/5 bg-white/[0.02] px-2.5 py-2">
         <span className="font-display text-[12.5px] font-medium leading-none tracking-tightest text-white">
-          Northwave
+          Happy Herbals
         </span>
         <span className="font-mono text-[7px] tracking-wider text-fog-muted">
           ®
@@ -451,7 +451,7 @@ function SocialCard() {
       <div className="flex items-center justify-between">
         <span className="eyebrow text-[9px]">Social</span>
         <span className="font-mono text-[7px] tracking-wider text-fog-muted sm:text-[7.5px]">
-          @northwave
+          @happyherbals
         </span>
       </div>
 
