@@ -78,7 +78,7 @@ export function WebsitesCTA() {
 
             <div className="mt-12 flex flex-col items-center justify-center gap-3 sm:flex-row">
               <Link
-                href="https://calendly.com/gnanimarketingsolutions/30min"
+                href="https://wa.me/447442559228?text=Hi%2C%20I%27m%20interested%20in%20learning%20more%20about%20GMS%20and%20what%20you%20can%20build%20for%20my%20business."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary"
