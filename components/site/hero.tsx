@@ -9,20 +9,21 @@ const ease = [0.16, 1, 0.3, 1] as const;
 
 export function Hero() {
   return (
-    <section className="relative isolate overflow-hidden pt-36 sm:pt-44 md:pt-56">
+    <section className="relative isolate overflow-hidden">
       <AmbientField />
       <div className="absolute inset-0 -z-10 grid-bg opacity-40" />
 
       <div className="container relative">
-        {/* Headline + subtext */}
-        <div className="mx-auto mt-8 max-w-[1100px] text-center sm:mt-10 md:mt-12">
+        {/* Above-the-fold content — vertically centered in the viewport */}
+        <div className="flex min-h-[100svh] flex-col justify-center py-28">
+          <div className="mx-auto max-w-[1100px] text-center">
           <motion.h1
             initial={{ opacity: 0, y: 26 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2, ease, delay: 0.15 }}
             className="font-display text-display-xl font-medium text-balance"
           >
-            Websites and growth systems, built properly.
+            Built properly.
             <br />
             Not templated.
           </motion.h1>
@@ -61,6 +62,7 @@ export function Hero() {
               View selected work
             </Link>
           </motion.div>
+          </div>
         </div>
 
         {/* Cinematic visual */}

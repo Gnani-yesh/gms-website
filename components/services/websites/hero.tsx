@@ -8,11 +8,13 @@ const ease = [0.16, 1, 0.3, 1] as const;
 
 export function WebsitesHero() {
   return (
-    <section className="relative isolate overflow-hidden pt-36 sm:pt-44 md:pt-56">
+    <section className="relative isolate overflow-hidden">
       <AmbientField />
       <div className="absolute inset-0 -z-10 grid-bg opacity-40" />
 
       <div className="container relative">
+        {/* Above-the-fold content — vertically centered in the viewport */}
+        <div className="flex min-h-[100svh] flex-col justify-center py-28">
         {/* Service tag */}
         <motion.div
           initial={{ opacity: 0, y: 16 }}
@@ -67,6 +69,7 @@ export function WebsitesHero() {
               See selected work
             </Link>
           </motion.div>
+        </div>
         </div>
 
         {/* Hero website preview */}
