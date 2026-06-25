@@ -12,7 +12,7 @@ export function BrandingHero() {
         <>
           Brands designed
           <br />
-          <span className="italic font-light text-fog">to be remembered.</span>
+          to be remembered.
         </>
       }
       description={

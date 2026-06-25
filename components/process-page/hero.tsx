@@ -39,7 +39,7 @@ export function ProcessHero() {
           >
             How we build.
             <br />
-            <span className="italic font-light text-fog">How we operate.</span>
+            How we operate.
           </motion.h1>
 
           <motion.p

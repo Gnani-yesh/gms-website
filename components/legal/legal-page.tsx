@@ -62,7 +62,7 @@ export function LegalPage({
             {italic && (
               <>
                 <br />
-                <span className="italic font-light text-fog">{italic}</span>
+                {italic}
               </>
             )}
           </motion.h1>

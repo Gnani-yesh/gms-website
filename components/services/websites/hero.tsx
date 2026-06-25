@@ -39,10 +39,7 @@ export function WebsitesHero() {
           >
             Websites built
             <br />
-            <span className="bg-gradient-to-b from-white to-white/70 bg-clip-text text-transparent">
-              like
-            </span>{" "}
-            <span className="italic font-light text-fog">infrastructure.</span>
+            like infrastructure.
           </motion.h1>
 
           <motion.p

@@ -30,7 +30,7 @@ export function StartProjectHero() {
               GMS
             </Link>
             <span className="mx-2 text-fog-muted">/</span>
-            Now accepting 2026 partners
+            Start a project
           </span>
         </motion.div>
 
@@ -43,7 +43,7 @@ export function StartProjectHero() {
           >
             Begin the
             <br />
-            <span className="italic font-light text-fog">engagement.</span>
+            engagement.
           </motion.h1>
 
           <motion.p

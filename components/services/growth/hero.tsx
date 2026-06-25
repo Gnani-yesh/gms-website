@@ -13,10 +13,7 @@ export function GrowthHero() {
         <>
           Growth as
           <br />
-          <span className="bg-gradient-to-b from-white to-white/70 bg-clip-text text-transparent">
-            connected
-          </span>{" "}
-          <span className="italic font-light text-fog">infrastructure.</span>
+          connected infrastructure.
         </>
       }
       description={

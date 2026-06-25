@@ -13,10 +13,7 @@ export function PlatformsHero() {
         <>
           Operations
           <br />
-          <span className="bg-gradient-to-b from-white to-white/70 bg-clip-text text-transparent">
-            engineered
-          </span>{" "}
-          <span className="italic font-light text-fog">like infrastructure.</span>
+          engineered like infrastructure.
         </>
       }
       description={

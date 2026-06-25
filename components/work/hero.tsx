@@ -40,7 +40,7 @@ export function WorkHero() {
           >
             A small portfolio
             <br />
-            <span className="italic font-light text-fog">held to a high standard.</span>
+            held to a high standard.
           </motion.h1>
 
           <motion.p

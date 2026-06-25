@@ -87,9 +87,7 @@ export function CaseStudyHero({ study }: { study: CaseStudy }) {
           >
             {study.hero.title}
             <br />
-            <span className="italic font-light text-fog">
-              {study.hero.italic}
-            </span>
+            {study.hero.italic}
           </motion.h1>
 
           <motion.p

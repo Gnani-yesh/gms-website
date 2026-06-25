@@ -39,9 +39,7 @@ export function ServicesHero() {
           >
             Three disciplines.
             <br />
-            <span className="italic font-light text-fog">
-              One operating system.
-            </span>
+            One operating system.
           </motion.h1>
 
           <motion.p

@@ -27,7 +27,7 @@ export function ContactHero() {
               GMS
             </Link>
             <span className="mx-2 text-fog-muted">/</span>
-            Now accepting 2026 partners
+            Contact
           </span>
         </motion.div>
 
@@ -40,7 +40,7 @@ export function ContactHero() {
           >
             Tell us what
             <br />
-            <span className="italic font-light text-fog">you&apos;re building.</span>
+            you&apos;re building.
           </motion.h1>
 
           <motion.p

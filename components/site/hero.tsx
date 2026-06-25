@@ -14,22 +14,6 @@ export function Hero() {
       <div className="absolute inset-0 -z-10 grid-bg opacity-40" />
 
       <div className="container relative">
-        {/* Status chip */}
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease, delay: 0.1 }}
-          className="mx-auto inline-flex items-center gap-2.5 rounded-full border border-white/[0.07] bg-white/[0.02] px-3 py-1.5 backdrop-blur-md"
-        >
-          <span className="relative flex h-1.5 w-1.5">
-            <span className="absolute inset-0 rounded-full bg-accent opacity-60 animate-pulse-soft" />
-            <span className="relative h-1.5 w-1.5 rounded-full bg-accent" />
-          </span>
-          <span className="font-mono text-[10.5px] uppercase tracking-[0.2em] text-fog">
-            Now accepting Q3 / Q4 partners
-          </span>
-        </motion.div>
-
         {/* Headline + subtext */}
         <div className="mx-auto mt-8 max-w-[1100px] text-center sm:mt-10 md:mt-12">
           <motion.h1
@@ -40,11 +24,7 @@ export function Hero() {
           >
             Digital infrastructure
             <br />
-            for{" "}
-            <span className="bg-gradient-to-b from-white to-white/70 bg-clip-text text-transparent">
-              ambitious
-            </span>{" "}
-            <span className="italic font-light text-fog">businesses.</span>
+            for ambitious businesses.
           </motion.h1>
 
           <motion.p
@@ -106,8 +86,8 @@ export function Hero() {
             </p>
           </div>
           <div className="hairline mx-auto mt-9 max-w-[820px]" />
-          <div className="mx-auto mt-10 grid max-w-[920px] grid-cols-2 gap-y-9 sm:grid-cols-3 md:grid-cols-6">
-            {["Northwave", "Atelier", "Lumen", "Folio", "Meridian", "Halcyon"].map(
+          <div className="mx-auto mt-10 grid max-w-[920px] grid-cols-2 gap-y-9 sm:grid-cols-3 md:grid-cols-5">
+            {["Happy Herbals", "Thril", "Yeshveda", "Navavarna Infra", "Dr. Krishna"].map(
               (name) => (
                 <div
                   key={name}
