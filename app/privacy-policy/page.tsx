@@ -5,10 +5,31 @@ import { PageAtmosphere } from "@/components/shared/page-atmosphere";
 import { LegalPage, type LegalSection } from "@/components/legal/legal-page";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy — GMS",
+  title: "Privacy Policy | Gnani Marketing Solutions",
   description:
-    "How GMS collects, uses, stores and protects information about clients, partners and visitors.",
+    "Learn how Gnani Marketing Solutions collects, uses, stores, and protects your information across GMS Platform and our services.",
   alternates: { canonical: "/privacy-policy" },
+  openGraph: {
+    title: "Privacy Policy | Gnani Marketing Solutions",
+    description:
+      "Learn how Gnani Marketing Solutions collects, uses, stores, and protects your information across GMS Platform and our services.",
+    url: "/privacy-policy",
+    type: "website",
+  },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: "Privacy Policy",
+  description:
+    "Learn how Gnani Marketing Solutions collects, uses, stores, and protects your information across GMS Platform and our services.",
+  url: "https://www.gnanimarketing.com/privacy-policy",
+  publisher: {
+    "@type": "Organization",
+    name: "Gnani Marketing Solutions",
+    url: "https://www.gnanimarketing.com",
+  },
 };
 
 const SECTIONS: LegalSection[] = [
@@ -36,6 +57,14 @@ const SECTIONS: LegalSection[] = [
     paragraphs: [
       "We use the information you give us to respond to enquiries, scope and deliver engagements, send you written proposals, run the operating and reporting cadence on programs we operate, and meet our legal and accounting obligations.",
       "We do not sell, rent, or share your information with third parties for marketing purposes. We do not enrich or build profiles on visitors.",
+    ],
+  },
+  {
+    heading: "Third-Party Services",
+    paragraphs: [
+      "GMS Platform may integrate with trusted third-party services to provide features requested by our clients. These services may include Meta Platforms (Facebook, Instagram, WhatsApp), Google, payment providers, cloud infrastructure, analytics tools, and other business software.",
+      "When you choose to connect third-party accounts, we may securely exchange only the information necessary to provide the requested functionality. Your use of these third-party services is also governed by their respective privacy policies and terms.",
+      "We do not sell or share personal information with third parties for advertising purposes.",
     ],
   },
   {
@@ -83,6 +112,10 @@ const SECTIONS: LegalSection[] = [
 export default function PrivacyPolicyPage() {
   return (
     <main className="relative overflow-hidden bg-ink-950">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Navbar />
       <PageAtmosphere />
       <LegalPage

@@ -5,10 +5,31 @@ import { PageAtmosphere } from "@/components/shared/page-atmosphere";
 import { LegalPage, type LegalSection } from "@/components/legal/legal-page";
 
 export const metadata: Metadata = {
-  title: "Data Deletion Instructions — GMS",
+  title: "Data Deletion Instructions | Gnani Marketing Solutions",
   description:
-    "How to request deletion of your personal data and connected Meta account information from GMS Platform.",
+    "Learn how to request deletion of your personal data and connected Meta account information from GMS Platform.",
   alternates: { canonical: "/data-deletion" },
+  openGraph: {
+    title: "Data Deletion Instructions | Gnani Marketing Solutions",
+    description:
+      "Learn how to request deletion of your personal data and connected Meta account information from GMS Platform.",
+    url: "/data-deletion",
+    type: "website",
+  },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: "Data Deletion Instructions",
+  description:
+    "Learn how to request deletion of your personal data and connected Meta account information from GMS Platform.",
+  url: "https://www.gnanimarketing.com/data-deletion",
+  publisher: {
+    "@type": "Organization",
+    name: "Gnani Marketing Solutions",
+    url: "https://www.gnanimarketing.com",
+  },
 };
 
 const SECTIONS: LegalSection[] = [
@@ -31,7 +52,7 @@ const SECTIONS: LegalSection[] = [
       "Once we receive your request, we will verify your identity to protect your account and data. After successful verification, we will:",
     ],
     list: [
-      "Delete your GMS Platform account and any associated personal data.",
+      "Delete your personal data associated with GMS Platform, including connected Meta account information, stored access tokens, authentication credentials, and related account records, unless retention is required by applicable law.",
       "Remove any Meta access tokens and authentication credentials stored by GMS Platform.",
       "Delete information related to your connected Meta accounts, unless we are required to retain certain data to comply with legal, regulatory, or security obligations.",
     ],
@@ -53,6 +74,10 @@ const SECTIONS: LegalSection[] = [
 export default function DataDeletionPage() {
   return (
     <main className="relative overflow-hidden bg-ink-950">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Navbar />
       <PageAtmosphere />
       <LegalPage

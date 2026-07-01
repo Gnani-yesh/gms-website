@@ -5,10 +5,31 @@ import { PageAtmosphere } from "@/components/shared/page-atmosphere";
 import { LegalPage, type LegalSection } from "@/components/legal/legal-page";
 
 export const metadata: Metadata = {
-  title: "Terms of Service — GMS",
+  title: "Terms of Service | Gnani Marketing Solutions",
   description:
-    "Terms of service for clients, partners and visitors using the GMS website and engaging with the studio.",
+    "Read the Terms of Service governing the use of GMS Platform and services provided by Gnani Marketing Solutions.",
   alternates: { canonical: "/terms" },
+  openGraph: {
+    title: "Terms of Service | Gnani Marketing Solutions",
+    description:
+      "Read the Terms of Service governing the use of GMS Platform and services provided by Gnani Marketing Solutions.",
+    url: "/terms",
+    type: "website",
+  },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: "Terms of Service",
+  description:
+    "Read the Terms of Service governing the use of GMS Platform and services provided by Gnani Marketing Solutions.",
+  url: "https://www.gnanimarketing.com/terms",
+  publisher: {
+    "@type": "Organization",
+    name: "Gnani Marketing Solutions",
+    url: "https://www.gnanimarketing.com",
+  },
 };
 
 const SECTIONS: LegalSection[] = [
@@ -68,6 +89,15 @@ const SECTIONS: LegalSection[] = [
     ],
   },
   {
+    heading: "Platform Integrations",
+    paragraphs: [
+      "GMS Platform supports integrations with third-party services including Meta Platforms (Facebook, Instagram, WhatsApp), Google, and other business software providers.",
+      "By connecting a third-party account, you authorize GMS Platform to access and process the data necessary to provide the requested functionality.",
+      "Users remain responsible for complying with the terms, policies, and acceptable use requirements of any connected third-party platform.",
+      "GMS Platform is not responsible for outages, service interruptions, policy changes, or limitations imposed by third-party providers.",
+    ],
+  },
+  {
     heading: "Contact",
     paragraphs: [
       "Questions about these terms — gnanimarketingsolutions@gmail.com.",
@@ -79,6 +109,10 @@ const SECTIONS: LegalSection[] = [
 export default function TermsPage() {
   return (
     <main className="relative overflow-hidden bg-ink-950">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Navbar />
       <PageAtmosphere />
       <LegalPage
