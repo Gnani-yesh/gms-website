@@ -178,6 +178,12 @@ export function Footer() {
             >
               Cookies
             </Link>
+            <Link
+              href="/data-deletion"
+              className="transition-colors duration-300 hover:text-white"
+            >
+              Data
+            </Link>
           </div>
         </div>
       </div>

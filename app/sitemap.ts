@@ -20,6 +20,7 @@ const ROUTES = [
   "/privacy-policy",
   "/terms",
   "/cookies",
+  "/data-deletion",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
