@@ -149,11 +149,8 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Atmospheric wordmark */}
-        <Wordmark />
-
         {/* Bottom rail */}
-        <div className="mt-10 flex flex-col items-start justify-between gap-4 border-t border-white/[0.05] pt-8 text-[12px] text-fog-muted md:flex-row md:items-center">
+        <div className="mt-20 flex flex-col items-start justify-between gap-4 border-t border-white/[0.05] pt-8 text-[12px] text-fog-muted md:mt-24 md:flex-row md:items-center">
           <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5">
             <span>© {new Date().getFullYear()} Gnani Marketing Solutions</span>
             <span className="hidden h-3 w-px bg-white/15 md:inline-block" />
@@ -191,43 +188,3 @@ export function Footer() {
   );
 }
 
-/**
- * Atmospheric wordmark — the page's quiet sign-off.
- * Two layers: an architectural mark band + a soft fading glyph that
- * dissolves into the page background.
- */
-function Wordmark() {
-  return (
-    <div className="relative mt-32 select-none md:mt-40">
-      <div className="hairline" />
-
-      <div className="relative mt-14 md:mt-20">
-        <div
-          aria-hidden
-          className="text-center font-display font-medium leading-[0.85] tracking-tightest"
-          style={{
-            fontSize: "clamp(80px, 17vw, 240px)",
-            background:
-              "linear-gradient(180deg, rgba(255,255,255,0.07) 0%, rgba(255,255,255,0.02) 55%, transparent 95%)",
-            WebkitBackgroundClip: "text",
-            backgroundClip: "text",
-            WebkitTextFillColor: "transparent",
-            color: "transparent",
-          }}
-        >
-          GMS
-        </div>
-
-        {/* Subtle horizon line through the wordmark */}
-        <div
-          aria-hidden
-          className="pointer-events-none absolute inset-x-[8%] top-1/2 h-px"
-          style={{
-            background:
-              "linear-gradient(to right, transparent, rgba(255,255,255,0.05) 30%, rgba(255,255,255,0.05) 70%, transparent)",
-          }}
-        />
-      </div>
-    </div>
-  );
-}

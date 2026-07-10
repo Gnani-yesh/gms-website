@@ -444,7 +444,7 @@ export function ContactWizard() {
       </div>
 
       {/* Nav */}
-      <div className="mt-9 flex items-center justify-between border-t border-white/[0.05] pt-7">
+      <div className="mt-9 flex flex-wrap items-center justify-between gap-x-4 gap-y-4 border-t border-white/[0.05] pt-7">
         {step > 0 ? (
           <button
             type="button"
@@ -456,7 +456,7 @@ export function ContactWizard() {
             Back
           </button>
         ) : (
-          <span className="font-mono text-[10.5px] uppercase tracking-[0.22em] text-fog-muted">
+          <span className="whitespace-nowrap font-mono text-[10.5px] uppercase tracking-[0.22em] text-fog-muted">
             We respond within 2 business days
           </span>
         )}

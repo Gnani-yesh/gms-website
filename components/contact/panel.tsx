@@ -9,7 +9,7 @@ const ease = [0.16, 1, 0.3, 1] as const;
 
 export function ContactPanel() {
   return (
-    <section className="relative pb-32 pt-12 md:pb-44 md:pt-16">
+    <section className="relative pb-32 pt-20 md:pb-44 md:pt-28">
       <SectionAura tone="warm" position="top-right" size={680} />
       <SectionAura tone="cool" position="bottom-left" size={680} />
 
