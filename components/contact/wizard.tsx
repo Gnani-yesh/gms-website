@@ -213,29 +213,26 @@ export function ContactWizard() {
   }
 
   const onReview = step === TOTAL_STEPS;
+  const businessLabel =
+    a.businessType === "Other" ? a.businessTypeOther.trim() : a.businessType;
 
   return (
     <Panel>
-      {/* Header */}
+      {/* Progress — light dot indicator */}
       <div className="flex items-center gap-3">
-        <span className="font-mono text-[10.5px] uppercase tracking-[0.22em] text-fog-muted">
-          01
+        <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-fog-muted">
+          {onReview ? "Review" : `Step ${step + 1} / ${TOTAL_STEPS}`}
         </span>
-        <span className="h-px w-8 bg-gradient-to-r from-white/30 to-transparent" />
-        <span className="eyebrow">Project enquiry</span>
-      </div>
-
-      {/* Progress */}
-      <div className="mt-6 flex items-center gap-4">
-        <span className="font-mono text-[10.5px] uppercase tracking-[0.22em] text-fog-muted">
-          {onReview ? "Review" : `Step ${step + 1} of ${TOTAL_STEPS}`}
-        </span>
-        <div className="flex flex-1 gap-1.5">
+        <div className="flex items-center gap-1.5">
           {Array.from({ length: TOTAL_STEPS }).map((_, i) => (
             <span
               key={i}
-              className={`h-0.5 flex-1 rounded-full transition-colors duration-500 ${
-                i <= step ? "bg-accent/70" : "bg-white/[0.08]"
+              className={`h-1.5 w-1.5 rounded-full transition-all duration-500 ${
+                i === step
+                  ? "scale-125 bg-accent"
+                  : i < step
+                  ? "bg-accent/60"
+                  : "bg-white/[0.12]"
               }`}
             />
           ))}
@@ -243,7 +240,7 @@ export function ContactWizard() {
       </div>
 
       {/* Steps */}
-      <div className="relative mt-9 min-h-[300px]">
+      <div className="relative mt-8">
         <AnimatePresence mode="wait" custom={direction}>
           <motion.div
             key={step}
@@ -254,10 +251,7 @@ export function ContactWizard() {
             transition={{ duration: 0.4, ease }}
           >
             {step === 0 && (
-              <StepShell
-                title="What do you need?"
-                hint="Pick everything that applies — most projects combine a few."
-              >
+              <StepShell title="What do you need?" hint="Select all that apply.">
                 <ChipGroup>
                   {NEEDS.map((o) => (
                     <Chip
@@ -341,10 +335,7 @@ export function ContactWizard() {
             )}
 
             {step === 5 && (
-              <StepShell
-                title="Anything else?"
-                hint="Optional — links, context, or a sentence on where you'd like to be."
-              >
+              <StepShell title="Anything else?" hint="Optional.">
                 <textarea
                   value={a.notes}
                   onChange={(e) => set("notes", e.target.value)}
@@ -404,39 +395,55 @@ export function ContactWizard() {
             )}
 
             {onReview && (
-              <StepShell
-                title="Look right?"
-                hint="A quick read-back before you send it over."
-              >
-                <dl className="divide-y divide-white/[0.06] rounded-xl border border-white/[0.06] bg-white/[0.015]">
-                  <ReviewRow label="Needs" value={a.needs.join(", ")} />
-                  <ReviewRow
-                    label="Business"
-                    value={
-                      a.businessType === "Other"
-                        ? a.businessTypeOther
-                        : a.businessType
-                    }
-                  />
-                  <ReviewRow label="Goal" value={a.goal} />
-                  <ReviewRow label="Timeline" value={a.timeline} />
-                  <ReviewRow label="Budget" value={a.budget} />
-                  {a.notes.trim() && (
-                    <ReviewRow label="Notes" value={a.notes.trim()} />
-                  )}
-                  <ReviewRow label="Name" value={a.name} />
-                  <ReviewRow label="Email" value={a.email} />
-                  <ReviewRow label="Reach via" value={a.contactMethod} />
-                  {a.phone.trim() && (
-                    <ReviewRow label="Phone" value={a.phone} />
-                  )}
-                </dl>
-                {status === "error" && (
-                  <p className="mt-5 text-[13px] leading-[1.6] text-red-300/90">
-                    Something went wrong sending that. Please try again, or
-                    email us directly at gnanimarketingsolutions@gmail.com.
+              <StepShell title="Look right?">
+                <div className="space-y-6">
+                  {/* Project readback — light and flowing */}
+                  <p className="text-[17px] leading-[1.5] text-white md:text-[18px]">
+                    {a.needs.join(", ")}
+                    {businessLabel ? (
+                      <>
+                        {" "}
+                        for your{" "}
+                        <span className="text-accent">{businessLabel}</span>{" "}
+                        business
+                      </>
+                    ) : null}
+                    .
                   </p>
-                )}
+                  <p className="text-[13.5px] uppercase tracking-[0.14em] text-fog-muted">
+                    {[a.goal, a.timeline, a.budget]
+                      .filter(Boolean)
+                      .join("   ·   ")}
+                  </p>
+                  {a.notes.trim() && (
+                    <p className="border-l-2 border-white/10 pl-4 text-[13.5px] leading-[1.6] text-fog-muted">
+                      {a.notes.trim()}
+                    </p>
+                  )}
+
+                  {/* Contact confirm — kept prominent to catch typos */}
+                  <div className="rounded-xl border border-white/[0.07] bg-white/[0.02] p-5">
+                    <div className="font-display text-[16px] font-medium tracking-tight-display text-white">
+                      {a.name.trim() || "—"}
+                    </div>
+                    <div className="mt-1.5 text-[14px] text-fog">
+                      {a.email.trim()}
+                    </div>
+                    {a.phone.trim() && (
+                      <div className="text-[14px] text-fog">{a.phone.trim()}</div>
+                    )}
+                    <div className="mt-3 border-t border-white/[0.05] pt-3 font-mono text-[10.5px] uppercase tracking-[0.2em] text-fog-muted">
+                      We&apos;ll reach you by {a.contactMethod}
+                    </div>
+                  </div>
+
+                  {status === "error" && (
+                    <p className="text-[13px] leading-[1.6] text-red-300/90">
+                      Something went wrong sending that. Please try again, or
+                      email us directly at gnanimarketingsolutions@gmail.com.
+                    </p>
+                  )}
+                </div>
               </StepShell>
             )}
           </motion.div>
@@ -531,7 +538,7 @@ function StepShell({
 }
 
 function ChipGroup({ children }: { children: React.ReactNode }) {
-  return <div className="flex flex-wrap gap-2.5">{children}</div>;
+  return <div className="grid grid-cols-1 gap-2.5 sm:grid-cols-2">{children}</div>;
 }
 
 function Chip({
@@ -547,13 +554,14 @@ function Chip({
     <button
       type="button"
       onClick={onClick}
-      className={`rounded-full border px-4 py-2 text-[13px] tracking-tight transition-colors duration-300 ${
+      className={`flex w-full items-center justify-between gap-3 rounded-xl border px-5 py-3.5 text-left text-[14.5px] tracking-tight transition-colors duration-300 ${
         active
-          ? "border-accent/40 bg-accent/10 text-accent"
-          : "border-white/[0.07] bg-white/[0.02] text-fog hover:border-white/[0.14] hover:text-white"
+          ? "border-accent/50 bg-accent/[0.08] text-accent"
+          : "border-white/[0.08] bg-white/[0.02] text-fog hover:border-white/[0.16] hover:text-white"
       }`}
     >
-      {label}
+      <span>{label}</span>
+      {active && <Check className="h-4 w-4 shrink-0" strokeWidth={2.5} />}
     </button>
   );
 }
@@ -575,15 +583,3 @@ function LabeledField({
   );
 }
 
-function ReviewRow({ label, value }: { label: string; value: string }) {
-  return (
-    <div className="flex gap-4 px-4 py-3.5">
-      <dt className="w-24 shrink-0 font-mono text-[10px] uppercase tracking-[0.18em] text-fog-muted">
-        {label}
-      </dt>
-      <dd className="flex-1 whitespace-pre-wrap text-[14px] leading-[1.55] text-white">
-        {value || "—"}
-      </dd>
-    </div>
-  );
-}
