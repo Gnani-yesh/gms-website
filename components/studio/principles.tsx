@@ -17,8 +17,8 @@ const PRINCIPLES = [
   },
   {
     n: "03",
-    title: "Few partners, deep relationships",
-    body: "We take on a small number of partners each year. The work that compounds is the work we keep doing together.",
+    title: "A small team you work with directly",
+    body: "It's just the two of us, so you talk to the people doing the actual work — not an account manager passing on messages.",
   },
   {
     n: "04",
@@ -33,7 +33,7 @@ const PRINCIPLES = [
   {
     n: "06",
     title: "Build with a small team",
-    body: "Eight people, working closely. No layered account teams between you and the people doing the work.",
+    body: "Just the two of us, working closely. No layered account teams between you and the people doing the work.",
   },
 ];
 

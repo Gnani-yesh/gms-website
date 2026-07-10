@@ -90,7 +90,7 @@ export const CASE_STUDIES: CaseStudy[] = [
       paragraphs: [
         "We built their entire digital presence from scratch.",
         "First the Shopify store — restructured, rewritten, and designed so customers can actually find what they need and trust what they're buying. Then Meta ad campaigns to bring in new customers consistently, spending lakhs across multiple campaigns to find what works and scale it. Then a WhatsApp system with over 3,200 customers — so the brand can stay in touch, share new products, and bring people back without spending on ads every time.",
-        "Happy Herbals went from zero online presence to a brand that acquires customers, sells products, and communicates with its audience — all digitally.",
+        "Happy Herbals went from nothing online to a brand that finds new customers, sells online, and stays in touch with them — all in one place.",
       ],
       pillars: [
         {
@@ -99,7 +99,7 @@ export const CASE_STUDIES: CaseStudy[] = [
         },
         {
           title: "Meta ad campaigns",
-          body: "Consistent new-customer acquisition — lakhs spent across campaigns to find what works and scale it.",
+          body: "A steady stream of new customers — lakhs spent across campaigns to find what works and scale it.",
         },
         {
           title: "WhatsApp engine",
@@ -110,9 +110,9 @@ export const CASE_STUDIES: CaseStudy[] = [
 
     systems: {
       items: [
-        { name: "Shopify store", description: "Restructured catalog, rewritten product copy, conversion-focused design." },
-        { name: "Meta ad campaigns", description: "Multi-campaign acquisition engine — tested, optimised and scaled." },
-        { name: "WhatsApp broadcast system", description: "3,200+ customer list for new-product drops and re-engagement." },
+        { name: "Shopify store", description: "Restructured catalog, rewritten product copy, designed to make buying easy." },
+        { name: "Meta ad campaigns", description: "Several ad campaigns, tested and scaled to what works." },
+        { name: "WhatsApp broadcast system", description: "A list of 3,200+ customers for new-product drops and to bring people back." },
       ],
     },
 
@@ -179,7 +179,7 @@ export const CASE_STUDIES: CaseStudy[] = [
 
     systems: {
       items: [
-        { name: "Marketing website", description: "Clean, professional, trust-first information architecture." },
+        { name: "Marketing website", description: "Clean, professional, and easy to read and trust." },
         { name: "Content library", description: "12 SEO articles targeting real patient search queries." },
         { name: "Local SEO & Maps", description: "Google indexing and Google Business / Maps presence for Hyderabad." },
       ],
@@ -226,7 +226,7 @@ export const CASE_STUDIES: CaseStudy[] = [
 
     solution: {
       paragraphs: [
-        "We built a four-page website in dark navy and gold — a design that feels expensive without trying too hard. Property listings laid out clearly with the details serious buyers actually need. A straightforward contact flow so interested investors can reach the team without friction. Everything written in a tone that speaks to someone making a significant financial decision.",
+        "We built a four-page website in dark navy and gold — a design that feels expensive without trying too hard. Property listings laid out clearly with the details serious buyers actually need. A simple way for interested investors to reach the team. Everything written in a tone that speaks to someone making a big financial decision.",
         "When someone lands on navavarna.com, they know immediately they're dealing with a serious company.",
       ],
       pillars: [
@@ -239,8 +239,8 @@ export const CASE_STUDIES: CaseStudy[] = [
           body: "Laid out with the details serious buyers actually need to make a decision.",
         },
         {
-          title: "A frictionless contact flow",
-          body: "So interested investors can reach the team without getting in their own way.",
+          title: "An easy way to get in touch",
+          body: "So interested investors can reach the team quickly, without any hassle.",
         },
       ],
     },
@@ -249,7 +249,7 @@ export const CASE_STUDIES: CaseStudy[] = [
       items: [
         { name: "Four-page website", description: "Dark navy and gold identity, built to read as premium." },
         { name: "Property listings", description: "Clear layouts with the details serious buyers need." },
-        { name: "Enquiry flow", description: "Straightforward contact path for high-intent investors." },
+        { name: "Enquiry flow", description: "A straightforward way for serious buyers to get in touch." },
       ],
     },
 

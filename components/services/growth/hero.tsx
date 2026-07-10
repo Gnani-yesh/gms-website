@@ -52,7 +52,7 @@ function GrowthPreview() {
         className="glass-strong relative w-full overflow-hidden rounded-2xl shadow-premium ring-1 ring-white/[0.05]"
         style={{ aspectRatio: "16 / 10" }}
       >
-        <ChromeBar url="growth.gnanimarketing.com/northwave" />
+        <ChromeBar url="growth.gnanimarketing.com" />
 
         <div className="relative flex h-[calc(100%-44px)] flex-col">
           {/* Header */}
@@ -62,7 +62,7 @@ function GrowthPreview() {
                 <span className="h-1.5 w-1.5 rounded-full bg-accent" />
               </span>
               <span className="font-display text-[12px] font-medium tracking-tight-display text-white sm:text-[13px] lg:text-[14px]">
-                Northwave · Growth
+                Growth · Console
               </span>
             </div>
             <div className="flex items-center gap-2.5 sm:gap-3.5 lg:gap-5">
@@ -88,15 +88,14 @@ function GrowthPreview() {
               </div>
               <div className="mt-3 space-y-2.5">
                 {[
-                  { label: "Organic", v: "44%", w: 44 },
-                  { label: "Paid · Meta", v: "26%", w: 26 },
-                  { label: "Paid · Search", v: "18%", w: 18 },
-                  { label: "Editorial", v: "12%", w: 12 },
+                  { label: "Organic", w: 44 },
+                  { label: "Paid · Meta", w: 26 },
+                  { label: "Paid · Search", w: 18 },
+                  { label: "Editorial", w: 12 },
                 ].map((r) => (
                   <div key={r.label}>
                     <div className="flex items-center justify-between text-[10px]">
                       <span className="text-fog">{r.label}</span>
-                      <span className="font-mono text-white">{r.v}</span>
                     </div>
                     <div className="mt-1.5 h-px w-full bg-white/[0.05]">
                       <div
@@ -114,19 +113,14 @@ function GrowthPreview() {
               <div className="flex items-baseline justify-between">
                 <div>
                   <div className="font-mono text-[8px] uppercase tracking-[0.22em] text-fog-muted sm:text-[8.5px]">
-                    — Pipeline · Last 12 months
+                    — Pipeline
                   </div>
-                  <div className="mt-2 flex items-baseline gap-3">
-                    <span className="font-display text-[28px] font-medium leading-none tracking-tightest text-white sm:text-[32px] lg:text-[40px]">
-                      +218%
-                    </span>
-                    <span className="text-[11.5px] text-fog-muted">
-                      qualified · YoY
-                    </span>
+                  <div className="mt-2 font-display text-[24px] font-medium leading-none tracking-tightest text-white sm:text-[28px] lg:text-[34px]">
+                    Compounding growth
                   </div>
                 </div>
                 <span className="rounded-full border border-emerald-500/20 bg-emerald-500/10 px-2 py-0.5 font-mono text-[8.5px] tracking-wider text-emerald-300/90">
-                  +1.8 PTS
+                  TRENDING UP
                 </span>
               </div>
 
@@ -153,18 +147,13 @@ function GrowthPreview() {
 
               {/* KPI tiles */}
               <div className="mt-5 grid grid-cols-2 gap-3 border-t border-white/[0.05] pt-4 md:grid-cols-4">
-                {[
-                  { label: "ROAS", v: "4.2×" },
-                  { label: "CAC", v: "−34%" },
-                  { label: "DR", v: "67" },
-                  { label: "Sessions", v: "184k" },
-                ].map((t) => (
-                  <div key={t.label}>
+                {["SEO", "Meta Ads", "Content", "Social"].map((t) => (
+                  <div key={t}>
                     <div className="font-mono text-[7.5px] tracking-[0.18em] text-fog-muted">
-                      {t.label}
+                      CHANNEL
                     </div>
                     <div className="mt-1 font-display text-[14px] font-medium tracking-tight-display text-white sm:text-[16px]">
-                      {t.v}
+                      {t}
                     </div>
                   </div>
                 ))}

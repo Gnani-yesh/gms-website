@@ -46,7 +46,7 @@ export function Footer() {
                 <span className="relative h-1.5 w-1.5 rounded-full bg-emerald-400" />
               </span>
               <span className="font-mono text-[10.5px] uppercase tracking-[0.2em] text-fog">
-                Available · 2026 partners
+                Available for new projects
               </span>
             </div>
           </div>
@@ -142,7 +142,7 @@ export function Footer() {
                   Studio
                 </div>
                 <div className="mt-1 text-[13.5px] text-fog">
-                  Swansea, UK
+                  Hyderabad, India &amp; Swansea, UK
                 </div>
               </li>
             </ul>
@@ -157,7 +157,7 @@ export function Footer() {
           <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5">
             <span>© {new Date().getFullYear()} Gnani Marketing Solutions</span>
             <span className="hidden h-3 w-px bg-white/15 md:inline-block" />
-            <span>Swansea · UK</span>
+            <span>Hyderabad · Swansea</span>
           </div>
           <div className="flex items-center gap-6">
             <Link
@@ -200,16 +200,6 @@ function Wordmark() {
   return (
     <div className="relative mt-32 select-none md:mt-40">
       <div className="hairline" />
-
-      {/* Architectural marks — coordinates of Swansea */}
-      <div className="pointer-events-none absolute inset-x-0 top-0 flex justify-between font-mono text-[9px] tracking-[0.18em] text-fog-muted">
-        <span className="-translate-y-1/2 bg-ink-950 px-2">
-          — LATITUDE 51.62°N
-        </span>
-        <span className="-translate-y-1/2 bg-ink-950 px-2">
-          LONGITUDE 3.94°W —
-        </span>
-      </div>
 
       <div className="relative mt-14 md:mt-20">
         <div

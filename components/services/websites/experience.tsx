@@ -8,18 +8,18 @@ const ease = [0.16, 1, 0.3, 1] as const;
 const PILLARS = [
   {
     label: "Performance",
-    metric: "0.9s",
-    detail: "Average first contentful paint",
+    metric: "Fast",
+    detail: "Built to load instantly on every device.",
   },
   {
     label: "Accessibility",
-    metric: "100",
-    detail: "Lighthouse score, every ship",
+    metric: "Inclusive",
+    detail: "Built to WCAG 2.2 AA from the first component.",
   },
   {
-    label: "Conversion",
-    metric: "+218%",
-    detail: "Average pipeline lift, YoY",
+    label: "Craft",
+    metric: "Considered",
+    detail: "Typography, motion and detail held to a higher standard.",
   },
 ];
 
@@ -117,7 +117,7 @@ export function WebsitesExperience() {
             <span className="h-1 w-1 rounded-full bg-fog-muted/60" />
             <span>WCAG 2.2 AA</span>
             <span className="h-1 w-1 rounded-full bg-fog-muted/60" />
-            <span>Core Web Vitals · 100</span>
+            <span>Core Web Vitals</span>
             <span className="h-1 w-1 rounded-full bg-fog-muted/60" />
             <span>Headless CMS</span>
             <span className="h-1 w-1 rounded-full bg-fog-muted/60" />

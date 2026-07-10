@@ -6,9 +6,9 @@ import { SectionAura } from "@/components/site/section-aura";
 const ease = [0.16, 1, 0.3, 1] as const;
 
 const PILLARS = [
-  { label: "Uptime", metric: "99.99%", detail: "Monitored, autoscaled, observable end-to-end." },
-  { label: "Response", metric: "p95 · 180ms", detail: "Edge-rendered with regional caches." },
-  { label: "Coverage", metric: "100%", detail: "Automated tests on critical paths." },
+  { label: "Reliability", metric: "Observable", detail: "Monitored, autoscaled, observable end-to-end." },
+  { label: "Response", metric: "Edge-fast", detail: "Edge-rendered with regional caches." },
+  { label: "Coverage", metric: "Tested", detail: "Automated tests on the critical paths." },
 ];
 
 export function PlatformsExperience() {

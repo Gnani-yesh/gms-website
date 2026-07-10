@@ -299,7 +299,7 @@ function CentralCard() {
               <span className="relative h-1 w-1 rounded-full bg-accent" />
             </span>
             <span className="text-[8px] text-fog sm:text-[8.5px]">
-              Now booking 2026 partners
+              Now booking new projects
             </span>
           </div>
         </div>
@@ -387,21 +387,16 @@ function SeoCard() {
         </span>
       </div>
 
-      <div className="mt-2.5 flex items-baseline gap-1.5">
-        <span className="font-display text-[24px] font-medium leading-none tracking-tightest text-white sm:text-[26px]">
-          +184
-        </span>
-        <span className="font-display text-[14px] font-medium leading-none tracking-tightest text-fog sm:text-[15px]">
-          %
-        </span>
+      <div className="mt-2.5 font-display text-[15px] font-medium leading-none tracking-tightest text-white sm:text-[16px]">
+        Organic search
       </div>
-      <div className="mt-1 text-[9px] text-fog-muted">organic search · YoY</div>
+      <div className="mt-1 text-[9px] text-fog-muted">Indexed &amp; ranking</div>
 
       <Sparkline gradientId="seo-spark" />
 
       <div className="mt-2 flex items-center justify-between border-t border-white/[0.04] pt-2 font-mono text-[7px] tracking-wider text-fog-muted sm:text-[7.5px]">
-        <span>DR · 67</span>
-        <span>#1 / 12 KW</span>
+        <span>GOOGLE</span>
+        <span>SEO · CONTENT</span>
       </div>
     </div>
   );
@@ -419,21 +414,16 @@ function AdsCard() {
         </span>
       </div>
 
-      <div className="mt-2.5 flex items-baseline gap-1.5">
-        <span className="font-display text-[24px] font-medium leading-none tracking-tightest text-white sm:text-[26px]">
-          4.2
-        </span>
-        <span className="font-display text-[14px] font-medium leading-none tracking-tightest text-fog sm:text-[15px]">
-          ×
-        </span>
+      <div className="mt-2.5 font-display text-[15px] font-medium leading-none tracking-tightest text-white sm:text-[16px]">
+        Paid campaigns
       </div>
-      <div className="mt-1 text-[9px] text-fog-muted">ROAS · paid · YoY</div>
+      <div className="mt-1 text-[9px] text-fog-muted">Meta &amp; Google · live</div>
 
       <Sparkline gradientId="ads-spark" />
 
       <div className="mt-2 flex items-center justify-between border-t border-white/[0.04] pt-2 font-mono text-[7px] tracking-wider text-fog-muted sm:text-[7.5px]">
         <span>META · GOOGLE</span>
-        <span>Q1 · 26</span>
+        <span>ACQUISITION</span>
       </div>
     </div>
   );
@@ -465,18 +455,13 @@ function SocialCard() {
         ))}
       </div>
 
-      <div className="mt-3 flex items-baseline gap-1.5">
-        <span className="font-display text-[18px] font-medium leading-none tracking-tightest text-white sm:text-[20px]">
-          12.4K
-        </span>
-        <span className="font-mono text-[8px] tracking-wider text-emerald-300/80">
-          +24%
-        </span>
+      <div className="mt-3 font-display text-[15px] font-medium leading-none tracking-tightest text-white sm:text-[16px]">
+        Content grid
       </div>
 
       <div className="mt-2 flex items-center justify-between border-t border-white/[0.04] pt-2 font-mono text-[7px] tracking-wider text-fog-muted sm:text-[7.5px]">
         <span>EDITORIAL · WEEKLY</span>
-        <span>MoM</span>
+        <span>ORGANIC</span>
       </div>
     </div>
   );

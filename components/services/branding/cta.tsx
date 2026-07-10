@@ -12,7 +12,7 @@ export function BrandingCTA() {
           <span className="italic font-light text-fog">won&apos;t outgrow.</span>
         </>
       }
-      description="We work with a small number of partners on identity engagements each year. If you're at an inflection where the brand needs to move ahead of the company, we'd love to talk."
+      description="It's a two-person studio, so you work directly with the people doing the work. If you're at a point where the brand needs to move ahead of the company, we'd love to talk."
       primaryLabel="Start a brand"
       ghostLabel="Explore our work"
       ghostHref="/work"

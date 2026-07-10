@@ -41,7 +41,7 @@ const STAGES = [
     title: "Infrastructure",
     duration: "Week 4 — 12",
     body:
-      "Identity, surfaces, platforms, content systems and measurement layers are designed and engineered. Production-grade builds — not deliverables — engineered to be operated for years.",
+      "Identity, surfaces, platforms, content systems and measurement layers are designed and engineered. Production-grade builds — not deliverables — engineered to last and be operated for the long term.",
     artifacts: [
       "Brand identity & system",
       "Marketing site & platforms",
@@ -69,7 +69,7 @@ const STAGES = [
     title: "Growth",
     duration: "Quarter 2 +",
     body:
-      "We continue to operate the program — content, paid creative, lifecycle, optimization. The work that compounds is the work we keep doing. Most of our partners stay with us through this stage for years.",
+      "We continue to operate the program — content, paid creative, lifecycle, optimization. The work that compounds is the work we keep doing.",
     artifacts: [
       "Editorial cadence",
       "Paid creative loop",

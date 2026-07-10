@@ -18,7 +18,7 @@ const PRINCIPLES = [
   {
     n: "03",
     title: "Long arcs, slow improvements",
-    body: "We measure success in years, not launch posts. The standard is whether the work still looks right two years later.",
+    body: "We build for the long run, not just launch day. What matters is whether the work still holds up two years later.",
   },
 ];
 

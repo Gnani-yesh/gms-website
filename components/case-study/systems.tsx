@@ -27,7 +27,7 @@ export function CaseStudySystems({ study }: { study: CaseStudy }) {
               Systems built
             </h2>
             <p className="mt-6 max-w-[260px] text-[13.5px] leading-[1.65] text-fog-muted">
-              The artifacts shipped during this engagement — designed, engineered and handed over to the team to operate.
+              What we built and handed over for the team to run on their own.
             </p>
           </motion.div>
 

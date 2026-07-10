@@ -7,7 +7,7 @@ import { SectionAura } from "@/components/site/section-aura";
 const STEPS = [
   { n: "01", title: "Audit", duration: "Week 1 — 2", body: "Funnel, channels, attribution, content surfaces, and the actual unit economics — assessed against where the business is going." },
   { n: "02", title: "Strategy", duration: "Week 2 — 3", body: "Channel mix, content thesis, paid model, measurement plan. The decisions that determine whether growth compounds." },
-  { n: "03", title: "Build", duration: "Week 3 — 6", body: "Tracking, creative systems, content infrastructure, automation. The plumbing the program runs on for years." },
+  { n: "03", title: "Build", duration: "Week 3 — 6", body: "Tracking, creative systems, content infrastructure, automation. The plumbing the program runs on for the long term." },
   { n: "04", title: "Operate", duration: "Ongoing", body: "Weekly compounding work — content, paid creative, optimization, lifecycle. With reporting your team can read." },
   { n: "05", title: "Compound", duration: "Quarter 2 +", body: "Quarterly review, model recalibration, expansion into new surfaces. Growth that keeps getting cheaper to run." },
 ];

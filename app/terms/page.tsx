@@ -44,7 +44,7 @@ const SECTIONS: LegalSection[] = [
     heading: "The work we deliver",
     paragraphs: [
       "We deliver design, engineering, brand and growth services as scoped in writing. The SOW for each engagement names the specific deliverables, timeline, fees and acceptance criteria.",
-      "We work with a small number of partners each year. We reserve the right to decline engagements that fall outside our practice or our capacity.",
+      "We reserve the right to decline engagements that fall outside our practice or our capacity.",
     ],
   },
   {

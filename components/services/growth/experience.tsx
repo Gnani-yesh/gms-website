@@ -6,9 +6,9 @@ import { SectionAura } from "@/components/site/section-aura";
 const ease = [0.16, 1, 0.3, 1] as const;
 
 const PILLARS = [
-  { label: "Pipeline", metric: "+218%", detail: "Qualified pipeline, average across last six engagements." },
-  { label: "ROAS", metric: "4.2×", detail: "Return on ad spend, blended across paid channels." },
-  { label: "CAC", metric: "−34%", detail: "Acquisition cost reduction within the first 90 days." },
+  { label: "Pipeline", metric: "Compounding", detail: "Acquisition built to get cheaper to run as the model sharpens." },
+  { label: "Paid", metric: "Efficient", detail: "Spend concentrated where it returns, across Meta and search." },
+  { label: "Retention", metric: "Owned", detail: "WhatsApp and email, so growth doesn't reset when the ads pause." },
 ];
 
 export function GrowthExperience() {
@@ -26,7 +26,7 @@ export function GrowthExperience() {
           >
             <span className="font-mono text-[10.5px] uppercase tracking-[0.2em] text-fog-muted">05</span>
             <span className="h-px w-8 bg-gradient-to-r from-white/30 to-transparent" />
-            <span className="eyebrow">The numbers</span>
+            <span className="eyebrow">The approach</span>
           </motion.div>
 
           <motion.h2

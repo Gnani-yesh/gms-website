@@ -12,7 +12,7 @@ export function PlatformsCTA() {
           <span className="italic font-light text-fog">actually works in.</span>
         </>
       }
-      description="We work with a small number of partners each year on platform engagements. If your operations are stitched together with tools you don't fully own, we'd love to talk."
+      description="It's a small, two-person studio — you work directly with us. If your operations are stitched together with tools you don't fully own, we'd love to talk."
       primaryLabel="Start a platform"
       ghostLabel="Explore our work"
       ghostHref="/work"

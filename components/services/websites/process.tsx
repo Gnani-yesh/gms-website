@@ -4,36 +4,21 @@ import { motion } from "framer-motion";
 import { SectionHeading } from "@/components/site/section-heading";
 import { SectionAura } from "@/components/site/section-aura";
 
-const STEPS = [
+const TIERS = [
   {
-    n: "01",
-    title: "Discovery",
-    duration: "Week 1",
-    body: "We embed with the leadership team to understand the business model, audience, and the ambition behind the work.",
+    title: "Landing page or simple site",
+    duration: "4 — 5 days",
+    body: "A single page or a small site — designed, built and ready to go live.",
   },
   {
-    n: "02",
-    title: "Strategy",
-    duration: "Week 2 — 3",
-    body: "Positioning, narrative, information architecture, and the technical roadmap defined as one connected system.",
+    title: "Standard website",
+    duration: "7 — 10 days",
+    body: "A full multi-page website with the pages most businesses need.",
   },
   {
-    n: "03",
-    title: "Design",
-    duration: "Week 3 — 6",
-    body: "Identity, interface, and editorial systems crafted with restraint, precision, and a sense of taste.",
-  },
-  {
-    n: "04",
-    title: "Development",
-    duration: "Week 6 — 10",
-    body: "Production-grade builds engineered for speed, accessibility, scale, and long-term maintainability.",
-  },
-  {
-    n: "05",
-    title: "Launch",
-    duration: "Week 10 — 12",
-    body: "QA, content migration, performance tuning and analytics — shipped with a clean handover and documentation.",
+    title: "E-commerce site",
+    duration: "2 — 3 weeks",
+    body: "A full online store — products, cart and checkout, ready to take orders.",
   },
 ];
 
@@ -45,22 +30,22 @@ export function WebsitesProcess() {
       <div className="container relative">
         <SectionHeading
           index="04"
-          eyebrow="Process"
+          eyebrow="Timeline"
           title={
             <>
-              Twelve weeks
+              Most sites ship in days,
               <br />
-              <span className="text-fog">from kickoff to launch.</span>
+              <span className="text-fog">not months.</span>
             </>
           }
-          description="Every engagement runs on the same operating model — designed for clarity, momentum and quality, without the noise of traditional agencies."
+          description="How long it takes depends on the size of the site. Here's what to expect."
         />
 
         <div className="relative mt-24">
           <ol>
-            {STEPS.map((s, i) => (
+            {TIERS.map((t, i) => (
               <motion.li
-                key={s.n}
+                key={t.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-60px" }}
@@ -69,26 +54,19 @@ export function WebsitesProcess() {
                   ease: [0.16, 1, 0.3, 1],
                   delay: i * 0.06,
                 }}
-                className="group relative grid grid-cols-1 gap-6 border-t border-white/[0.05] py-9 md:grid-cols-12 md:gap-10 md:py-12"
+                className="group relative grid grid-cols-1 gap-4 border-t border-white/[0.05] py-9 md:grid-cols-12 md:gap-10 md:py-12"
               >
-                <div className="md:col-span-2">
-                  <div className="flex items-center gap-3">
-                    <div className="grid h-9 w-9 place-items-center rounded-full border border-white/10 bg-white/[0.02] font-mono text-[11.5px] tracking-wider text-fog">
-                      {s.n}
-                    </div>
-                  </div>
-                </div>
-                <div className="md:col-span-3">
-                  <h3 className="font-display text-[28px] font-medium tracking-tight-display md:text-[36px]">
-                    {s.title}
+                <div className="md:col-span-5">
+                  <h3 className="font-display text-[24px] font-medium tracking-tight-display md:text-[30px]">
+                    {t.title}
                   </h3>
-                  <div className="mt-2 font-mono text-[10.5px] uppercase tracking-[0.2em] text-fog-muted">
-                    {s.duration}
+                  <div className="mt-2 font-mono text-[10.5px] uppercase tracking-[0.2em] text-accent">
+                    {t.duration}
                   </div>
                 </div>
                 <div className="md:col-span-7">
                   <p className="max-w-[520px] text-[15px] leading-[1.65] text-fog">
-                    {s.body}
+                    {t.body}
                   </p>
                 </div>
 
@@ -103,7 +81,7 @@ export function WebsitesProcess() {
           {/* Bottom rail anchor */}
           <div className="mt-12 flex items-center gap-3 border-t border-white/[0.05] pt-8 font-mono text-[10.5px] uppercase tracking-[0.2em] text-fog-muted">
             <span className="h-1 w-1 rounded-full bg-accent" />
-            <span>Tailored to your timeline · most engagements ship in 8 — 14 weeks</span>
+            <span>We confirm the exact timeline with you before we start</span>
           </div>
         </div>
       </div>

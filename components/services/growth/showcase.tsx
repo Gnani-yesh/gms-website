@@ -10,30 +10,20 @@ const ease = [0.16, 1, 0.3, 1] as const;
 
 const PROGRAMS = [
   {
-    client: "Northwave",
-    sector: "B2B SaaS · Pipeline",
-    discipline: "SEO · Content · Paid",
-    title: "From founder-led referrals to a self-serve growth engine",
-    primary: "+218%",
-    primaryLabel: "qualified pipeline",
-    metrics: [
-      { l: "Organic sessions", v: "+62%" },
-      { l: "ROAS · paid", v: "4.2×" },
-      { l: "CAC", v: "−34%" },
-    ],
+    slug: "happy-herbals",
+    client: "Happy Herbals",
+    sector: "Ayurvedic E-commerce",
+    discipline: "Meta Ads · WhatsApp · Growth",
+    title: "From zero online presence to a system that acquires and retains",
+    body: "A Shopify store, Meta ad campaigns, and a WhatsApp re-engagement engine — built so the brand acquires customers, sells, and brings them back without paying for ads every time.",
   },
   {
-    client: "Field & Form",
-    sector: "Editorial Commerce",
-    discipline: "Editorial · Social · CRM",
-    title: "Editorial system that doubled as the growth engine",
-    primary: "+312%",
-    primaryLabel: "annual revenue",
-    metrics: [
-      { l: "Repeat rate", v: "44%" },
-      { l: "AOV", v: "+58%" },
-      { l: "Email RPM", v: "$2.1" },
-    ],
+    slug: "dr-krishna",
+    client: "Dr. Krishna Health",
+    sector: "Healthcare",
+    discipline: "SEO · Content",
+    title: "A 15-year practice, finally findable on Google",
+    body: "A content strategy built around the exact searches patients type into Google, structured to rank locally — so people who've never heard of the practice find it and book.",
   },
 ];
 
@@ -78,8 +68,8 @@ export function GrowthShowcase() {
               transition={{ duration: 0.95, ease, delay: i * 0.07 }}
             >
             <Link
-              href="/work"
-              className="lift group relative block overflow-hidden rounded-2xl border border-white/[0.06] bg-ink-900/60 hover:border-white/[0.10]"
+              href={`/work/${p.slug}`}
+              className="lift group relative flex h-full flex-col overflow-hidden rounded-2xl border border-white/[0.06] bg-ink-900/60 hover:border-white/[0.10]"
             >
               {/* Header strip */}
               <div className="flex items-center justify-between border-b border-white/[0.05] px-7 py-4">
@@ -93,35 +83,16 @@ export function GrowthShowcase() {
                 </span>
               </div>
 
-              <div className="px-7 pb-9 pt-7 md:px-9 md:pb-10 md:pt-8">
+              <div className="flex flex-1 flex-col px-7 pb-9 pt-7 md:px-9 md:pb-10 md:pt-8">
                 <h3 className="font-display text-[24px] font-medium leading-[1.1] tracking-tight-display md:text-[28px]">
                   {p.title}
                 </h3>
 
-                <div className="mt-7 flex items-baseline gap-3 border-t border-white/[0.06] pt-6">
-                  <span className="font-display text-[42px] font-medium leading-none tracking-tightest text-accent md:text-[52px]">
-                    {p.primary}
-                  </span>
-                  <span className="text-[12.5px] text-fog-muted">
-                    {p.primaryLabel}
-                  </span>
-                </div>
+                <p className="mt-6 border-t border-white/[0.06] pt-6 text-[14.5px] leading-[1.65] text-fog">
+                  {p.body}
+                </p>
 
-                {/* Metric grid */}
-                <div className="mt-6 grid grid-cols-3 gap-3 border-t border-white/[0.06] pt-5">
-                  {p.metrics.map((m) => (
-                    <div key={m.l}>
-                      <div className="font-mono text-[8px] tracking-[0.18em] text-fog-muted">
-                        {m.l.toUpperCase()}
-                      </div>
-                      <div className="mt-1 font-display text-[18px] font-medium tracking-tight-display text-white">
-                        {m.v}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-
-                <div className="mt-6 flex items-center justify-between border-t border-white/[0.06] pt-4 font-mono text-[10px] tracking-wider text-fog-muted">
+                <div className="mt-auto flex items-center justify-between border-t border-white/[0.06] pt-5 font-mono text-[10px] tracking-wider text-fog-muted">
                   <span>CASE STUDY</span>
                   <ArrowUpRight
                     className="h-4 w-4 transition-all duration-500 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-white"

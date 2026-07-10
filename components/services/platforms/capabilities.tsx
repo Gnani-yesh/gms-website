@@ -38,7 +38,7 @@ const CAPABILITIES = [
   {
     icon: GaugeCircle,
     label: "Performance & uptime",
-    body: "Edge-rendered, autoscaled, monitored. 99.99% uptime with sub-second response across regions.",
+    body: "Edge-rendered, autoscaled, and monitored end-to-end — built for uptime and fast response across regions.",
   },
   {
     icon: LineChart,

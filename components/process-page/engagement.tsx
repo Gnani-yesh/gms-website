@@ -8,7 +8,7 @@ const ease = [0.16, 1, 0.3, 1] as const;
 const FACTS = [
   ["Build phase", "8 — 14 weeks"],
   ["Operate phase", "Ongoing · quarterly"],
-  ["Team allocated", "3 — 5 from GMS"],
+  ["Team allocated", "Gnani and Saitarun, directly"],
   ["Cadence", "Weekly working sessions"],
   ["Reporting", "Monthly + quarterly review"],
   ["Cancellation", "Any quarter, no penalty"],

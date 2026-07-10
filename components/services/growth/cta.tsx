@@ -14,7 +14,7 @@ export function GrowthCTA() {
           </span>
         </>
       }
-      description="We work with a small number of partners on long-term growth engagements. If you're spending without a connected system, we'd love to talk."
+      description="You work directly with the two of us on the day-to-day growth work. If you're spending without a connected system, we'd love to talk."
       primaryLabel="Start with growth"
       ghostLabel="Explore our work"
       ghostHref="/work"

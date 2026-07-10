@@ -6,13 +6,11 @@ import { SectionAura } from "@/components/site/section-aura";
 const ease = [0.16, 1, 0.3, 1] as const;
 
 const FACTS = [
-  ["Founded", "2022"],
+  ["Founded", "2025"],
   ["Studio", "Swansea, UK / Hyderabad, IN"],
-  ["Team", "8"],
-  ["Partners · 2026", "9 active"],
+  ["Team", "2"],
   ["Disciplines", "Build · Grow · Brand"],
   ["Languages", "EN · HI · TE"],
-  ["Engagements", "12 — 16 weeks · avg"],
   ["Working hours", "10:00 — 19:00 IST"],
 ];
 

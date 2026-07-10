@@ -71,18 +71,13 @@ export function WebsitesCTA() {
               </span>
             </h2>
             <p className="mx-auto mt-8 max-w-[580px] text-pretty text-[16px] leading-[1.6] text-fog md:text-[17.5px]">
-              We work with a small number of partners each year. If you&apos;re
-              ready to make a serious step change in how your brand is met
-              online, we&apos;d love to talk.
+              You work directly with the two of us, not an account manager. If
+              you&apos;re ready to make a serious step change in how your brand
+              is met online, we&apos;d love to talk.
             </p>
 
             <div className="mt-12 flex flex-col items-center justify-center gap-3 sm:flex-row">
-              <Link
-                href="https://wa.me/447442559228?text=Hi%2C%20I%27m%20interested%20in%20learning%20more%20about%20GMS%20and%20what%20you%20can%20build%20for%20my%20business."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-primary"
-              >
+              <Link href="/contact" className="btn-primary">
                 Start a website
                 <ArrowUpRight className="h-3.5 w-3.5" strokeWidth={2.25} />
               </Link>
@@ -109,7 +104,7 @@ export function WebsitesCTA() {
                   +44 7442 559228
                 </a>
                 <span className="h-2.5 w-px bg-white/15" />
-                <span>Swansea · UK</span>
+                <span>Hyderabad, IN · Swansea, UK</span>
               </div>
             </div>
           </div>

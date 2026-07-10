@@ -63,23 +63,22 @@ export function CTA() {
           <div className="mx-auto max-w-[920px] text-center">
             <span className="eyebrow">— Build with GMS</span>
             <h2 className="mt-7 font-display text-display-lg font-medium text-balance">
-              Build the company
+              Build a business people
               <br />
-              your category{" "}
+              can{" "}
               <span className="italic font-light text-fog">
-                hasn&apos;t seen yet.
+                find, trust, and buy from.
               </span>
             </h2>
             <p className="mx-auto mt-8 max-w-[560px] text-pretty text-[16px] leading-[1.6] text-fog md:text-[17.5px]">
-              We work with a small number of partners each year. If you&apos;re
-              ready to make a serious step change, we&apos;d love to talk.
+              It&apos;s a two-person studio — you work directly with us, not an
+              account manager. If you&apos;re ready to build something properly,
+              let&apos;s talk.
             </p>
 
             <div className="mt-12 flex flex-col items-center justify-center gap-3 sm:flex-row">
               <Link
-                href="https://wa.me/447442559228?text=Hi%2C%20I%27m%20interested%20in%20learning%20more%20about%20GMS%20and%20what%20you%20can%20build%20for%20my%20business."
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/contact"
                 className="btn-primary"
               >
                 Start a project
@@ -108,7 +107,7 @@ export function CTA() {
                   +44 7442 559228
                 </a>
                 <span className="h-2.5 w-px bg-white/15" />
-                <span>Swansea · UK</span>
+                <span>Hyderabad, IN · Swansea, UK</span>
               </div>
             </div>
           </div>

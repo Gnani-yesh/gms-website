@@ -11,7 +11,7 @@ export function StudioCTA() {
           <span className="italic font-light text-fog">Loud results.</span>
         </>
       }
-      description="We take on a small number of new partners each year. If our principles match how you'd want the work to feel, we'd love to talk."
+      description="It's a two-person studio, so you work directly with us — not an account manager. If our principles match how you'd want the work to feel, we'd love to talk."
       primaryLabel="Start a project"
       ghostLabel="See selected work"
       ghostHref="/work"

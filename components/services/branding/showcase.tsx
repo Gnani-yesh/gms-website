@@ -1,45 +1,26 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { SectionHeading } from "@/components/site/section-heading";
 import { SectionAura } from "@/components/site/section-aura";
+import { getCaseStudy } from "@/lib/case-studies";
 
 const ease = [0.16, 1, 0.3, 1] as const;
 
-const BRANDS = [
-  {
-    name: "Halcyon House",
-    sector: "Hospitality",
-    year: "2025",
-    discipline: "Identity · Photography · Editorial",
-    palette: ["#0F0B07", "#F5EEE1", "#B8956E", "#6B4F3A"],
-    type: "Caslon · Söhne",
-    italic: "House",
-    wordmark: "Halcyon",
-  },
-  {
-    name: "Field & Form",
-    sector: "Editorial Commerce",
-    year: "2025",
-    discipline: "Identity · Photography · Packaging",
-    palette: ["#1A1410", "#F5EEE1", "#B8956E", "#46362a"],
-    type: "Times Three · Söhne Mono",
-    italic: "& Form",
-    wordmark: "Field",
-  },
-  {
-    name: "Atelier Studio",
-    sector: "Architecture",
-    year: "2025",
-    discipline: "Identity · Editorial · Print",
-    palette: ["#07070A", "#FFFFFF", "#9B9B9B", "#1F2030"],
-    type: "Söhne · Söhne Breit",
-    italic: "Studio",
-    wordmark: "Atelier",
-  },
-];
+// Real brand engagements, pulled from the case-study source of truth.
+const BRANDS = [getCaseStudy("happy-herbals")!, getCaseStudy("navavarna")!].map(
+  (c) => ({
+    slug: c.slug,
+    name: c.client,
+    sector: c.sector,
+    year: c.year,
+    discipline: c.scope.join(" · "),
+    image: c.image,
+  })
+);
 
 export function BrandingShowcase() {
   return (
@@ -72,7 +53,7 @@ export function BrandingShowcase() {
           </Link>
         </div>
 
-        <div className="mt-20 grid grid-cols-1 gap-8 lg:grid-cols-3 lg:gap-6">
+        <div className="mt-20 grid grid-cols-1 gap-8 md:grid-cols-2 lg:gap-10">
           {BRANDS.map((b, i) => (
             <motion.div
               key={b.name}
@@ -82,42 +63,22 @@ export function BrandingShowcase() {
               transition={{ duration: 0.95, ease, delay: i * 0.07 }}
             >
             <Link
-              href="/work"
+              href={`/work/${b.slug}`}
               className="lift group relative flex h-full flex-col overflow-hidden rounded-2xl border border-white/[0.06] bg-ink-900/70 hover:border-white/[0.10]"
             >
-              {/* Identity sheet */}
-              <div className="relative flex aspect-[4/5] flex-col p-7 md:p-8">
-                <div className="flex items-center justify-between font-mono text-[9px] tracking-[0.22em] text-fog-muted">
-                  <span>— IDENTITY</span>
-                  <span>{b.year}</span>
-                </div>
-
-                <div className="flex flex-1 flex-col justify-center">
-                  <div className="font-display font-medium leading-[0.88] tracking-tightest text-white" style={{ fontSize: "clamp(32px, 5vw, 56px)" }}>
-                    {b.wordmark}
-                  </div>
-                  <div className="mt-0.5 font-display italic font-light leading-none tracking-tightest text-fog" style={{ fontSize: "clamp(24px, 4vw, 40px)" }}>
-                    {b.italic}
-                  </div>
-                </div>
-
-                <div className="mt-6 grid grid-cols-4 gap-1.5">
-                  {b.palette.map((c, idx) => (
-                    <div
-                      key={c}
-                      className="aspect-square rounded-sm ring-1 ring-white/5"
-                      style={{
-                        background: c,
-                        boxShadow: idx === 1 ? "inset 0 1px 0 rgba(0,0,0,0.04)" : undefined,
-                      }}
-                    />
-                  ))}
-                </div>
-
-                <div className="mt-4 flex items-end justify-between border-t border-white/[0.05] pt-3 font-mono text-[8.5px] tracking-[0.18em] text-fog-muted">
-                  <span>TYPE</span>
-                  <span className="text-fog">{b.type}</span>
-                </div>
+              {/* Real brand work */}
+              <div className="relative aspect-[16/11] overflow-hidden">
+                <Image
+                  src={b.image.src}
+                  alt={b.image.alt}
+                  fill
+                  sizes="(min-width: 768px) 50vw, 100vw"
+                  className="object-cover object-top transition-transform duration-1000 ease-out group-hover:scale-[1.015]"
+                />
+                <div
+                  aria-hidden
+                  className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/15 to-transparent"
+                />
               </div>
 
               {/* Caption */}

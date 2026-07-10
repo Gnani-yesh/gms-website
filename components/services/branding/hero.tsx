@@ -75,7 +75,7 @@ function BrandingPreview() {
                 className="mt-2 font-display font-medium leading-[0.85] tracking-tightest text-white"
                 style={{ fontSize: "clamp(40px, 7vw, 96px)" }}
               >
-                Halcyon
+                The Coast
               </div>
               <div className="mt-1 font-display italic font-light leading-none tracking-tightest text-fog" style={{ fontSize: "clamp(28px, 5vw, 64px)" }}>
                 House

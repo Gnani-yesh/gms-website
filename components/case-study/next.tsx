@@ -93,9 +93,7 @@ export function CaseStudyNext({ next }: { next: CaseStudy }) {
             ← All case studies
           </Link>
           <Link
-            href="https://wa.me/447442559228?text=Hi%2C%20I%27m%20interested%20in%20learning%20more%20about%20GMS%20and%20what%20you%20can%20build%20for%20my%20business."
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/contact"
             className="font-mono text-[10.5px] uppercase tracking-[0.22em] text-white transition-colors duration-300 hover:text-accent"
           >
             Start a project ↗

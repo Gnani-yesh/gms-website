@@ -33,7 +33,7 @@ export function PlatformsHero() {
 }
 
 /* ════════════════════════════════════════════
-   PLATFORM PREVIEW — Halcyon · Concierge
+   PLATFORM PREVIEW — sample operations console (illustrative)
    The internal operations console used by the
    hospitality brand whose website is on the
    Websites page. Same brand, opposite surface.
@@ -58,7 +58,7 @@ function PlatformPreview() {
         className="glass-strong relative w-full overflow-hidden rounded-2xl shadow-premium ring-1 ring-white/[0.05]"
         style={{ aspectRatio: "16 / 10" }}
       >
-        <ChromeBar url="halcyon.house/admin" />
+        <ChromeBar url="app.example.com/operations" />
 
         <div className="relative flex h-[calc(100%-44px)] flex-col">
           {/* Operations header */}
@@ -68,7 +68,7 @@ function PlatformPreview() {
                 <span className="h-1.5 w-1.5 rounded-full bg-accent" />
               </span>
               <span className="font-display text-[12px] font-medium tracking-tight-display text-white sm:text-[13px] lg:text-[14px]">
-                Halcyon · Concierge
+                Operations · Console
               </span>
             </div>
             <div className="flex items-center gap-2.5 sm:gap-3.5 lg:gap-5">
@@ -94,10 +94,10 @@ function PlatformPreview() {
               </div>
               <div className="mt-3 space-y-1.5">
                 {[
-                  { label: "Arrivals", v: "12", live: true },
-                  { label: "Departures", v: "8" },
-                  { label: "In-house", v: "24" },
-                  { label: "Concierge", v: "7" },
+                  { label: "Arrivals", live: true },
+                  { label: "Departures" },
+                  { label: "In-house" },
+                  { label: "Concierge" },
                 ].map((r) => (
                   <div
                     key={r.label}
@@ -109,9 +109,7 @@ function PlatformPreview() {
                       )}
                       <span className="text-[10px] text-fog">{r.label}</span>
                     </div>
-                    <span className="font-mono text-[10.5px] text-white">
-                      {r.v}
-                    </span>
+                    <span aria-hidden className="h-px w-6 bg-white/15" />
                   </div>
                 ))}
               </div>
@@ -120,16 +118,11 @@ function PlatformPreview() {
                 <div className="font-mono text-[8px] tracking-[0.22em] text-fog-muted">
                   OCCUPANCY
                 </div>
-                <div className="mt-2 flex items-baseline gap-1.5">
-                  <span className="font-display text-[22px] font-medium leading-none tracking-tightest text-white">
-                    87
-                  </span>
-                  <span className="font-display text-[12px] leading-none tracking-tightest text-fog">
-                    %
-                  </span>
+                <div className="mt-2 font-display text-[15px] font-medium leading-none tracking-tightest text-white">
+                  Live view
                 </div>
                 <div className="mt-2 h-px bg-white/[0.05]">
-                  <div className="h-full w-[87%] bg-gradient-to-r from-white/40 to-white/15" />
+                  <div className="h-full w-2/3 bg-gradient-to-r from-white/40 to-white/15" />
                 </div>
               </div>
             </aside>
@@ -220,19 +213,15 @@ function PlatformPreview() {
                 </div>
               </div>
 
-              {/* Footer KPIs */}
+              {/* Footer module labels */}
               <div className="mt-6 grid grid-cols-3 gap-3 border-t border-white/[0.05] pt-4">
-                {[
-                  { label: "RevPAR", v: "$842" },
-                  { label: "ADR", v: "$1,210" },
-                  { label: "On-time", v: "99.4%" },
-                ].map((t) => (
-                  <div key={t.label}>
+                {["Bookings", "Guests", "Concierge"].map((t) => (
+                  <div key={t}>
                     <div className="font-mono text-[7.5px] tracking-[0.18em] text-fog-muted">
-                      {t.label}
+                      MODULE
                     </div>
                     <div className="mt-1 font-display text-[14px] font-medium tracking-tight-display text-white sm:text-[16px]">
-                      {t.v}
+                      {t}
                     </div>
                   </div>
                 ))}

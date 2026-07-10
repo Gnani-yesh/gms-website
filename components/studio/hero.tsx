@@ -45,9 +45,9 @@ export function StudioHero() {
             transition={{ duration: 1, ease, delay: 0.35 }}
             className="mx-auto mt-7 max-w-[620px] text-pretty text-[15.5px] leading-[1.6] text-fog sm:mt-9 sm:text-[16px] md:text-[17.5px]"
           >
-            A small team that designs, builds and runs websites, branding and
-            growth for a handful of clients each year. Done properly, not at
-            scale.
+            A two-person team that designs, builds and runs websites, branding
+            and growth. You work directly with us — the people doing the actual
+            work.
           </motion.p>
 
           {/* Studio anchor */}
@@ -62,9 +62,9 @@ export function StudioHero() {
               <span className="h-1 w-1 rounded-full bg-fog-muted/70" />
               <span>Swansea, UK · Hyderabad, IN</span>
               <span className="h-1 w-1 rounded-full bg-fog-muted/70" />
-              <span>Established MMXXII</span>
+              <span>Established MMXXV</span>
               <span className="h-1 w-1 rounded-full bg-fog-muted/70" />
-              <span>Studio of 8</span>
+              <span>Studio of 2</span>
               <span className="h-1 w-1 rounded-full bg-fog-muted/70" />
             </div>
           </motion.div>

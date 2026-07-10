@@ -9,7 +9,10 @@ import { SectionAura } from "@/components/site/section-aura";
 
 const ease = [0.16, 1, 0.3, 1] as const;
 
+import { getCaseStudy, type CaseStudy } from "@/lib/case-studies";
+
 type ShowcaseSite = {
+  slug: string;
   client: string;
   sector: string;
   year: string;
@@ -17,49 +20,23 @@ type ShowcaseSite = {
   image: { src: string; alt: string };
 };
 
-const FEATURED: ShowcaseSite = {
-  client: "Aurora",
-  sector: "Luxury Real Estate",
-  year: "2025 — 26",
-  url: "aurora.estate",
-  image: {
-    src: "/mockups/websites/website-1.png",
-    alt: "Aurora luxury real-estate website hero — Homes Beyond",
-  },
-};
+const toSite = (c: CaseStudy): ShowcaseSite => ({
+  slug: c.slug,
+  client: c.client,
+  sector: c.sector,
+  year: c.year,
+  url: c.url,
+  image: c.image,
+});
+
+// Real delivered sites, pulled from the case-study source of truth.
+const FEATURED: ShowcaseSite = toSite(getCaseStudy("happy-herbals")!);
 
 const SUPPORTING: ShowcaseSite[] = [
-  {
-    client: "Aurélien",
-    sector: "Editorial Apparel",
-    year: "2025",
-    url: "aurelien.studio",
-    image: {
-      src: "/mockups/websites/website-2.png",
-      alt: "Aurélien editorial apparel storefront — Timeless pieces for modern living",
-    },
-  },
-  {
-    client: "Flowstate",
-    sector: "B2B SaaS",
-    year: "2025 — 26",
-    url: "flowstate.app",
-    image: {
-      src: "/mockups/websites/website-3.png",
-      alt: "Flowstate operating system marketing site — Run your entire business in one flow",
-    },
-  },
-  {
-    client: "Vellora",
-    sector: "Premium Leather",
-    year: "2025",
-    url: "vellora.co",
-    image: {
-      src: "/mockups/websites/website-4.png",
-      alt: "Vellora leather goods storefront — Timeless leather, modern craftsmanship",
-    },
-  },
-];
+  getCaseStudy("dr-krishna")!,
+  getCaseStudy("navavarna")!,
+  getCaseStudy("meltd")!,
+].map(toSite);
 
 export function WebsitesShowcase() {
   return (
@@ -125,7 +102,7 @@ function ShowcaseCard({
       transition={{ duration: 0.95, ease }}
     >
       <Link
-        href="/work"
+        href={`/work/${site.slug}`}
         className="lift group relative block overflow-hidden rounded-2xl border border-white/[0.06] bg-ink-900/40 hover:border-white/[0.10]"
       >
         <SiteImage site={site} featured={featured} priority={priority} />

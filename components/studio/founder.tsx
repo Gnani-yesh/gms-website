@@ -82,17 +82,16 @@ export function StudioFounder() {
             </p>
 
             <p className="mt-5 max-w-[560px] text-[15.5px] leading-[1.7] text-fog-muted md:text-[16.5px]">
-              The studio is small on purpose. Eight people, a deliberately
-              curated client list, and the long view. Most of our work comes
-              from referral. We&apos;d rather get the next thing right than
-              ship the next thing fast.
+              The studio is small on purpose. Two people, working directly with
+              each client, and the long view. Most of our work comes from
+              referral. We&apos;d rather get the next thing right than ship the
+              next thing fast.
             </p>
 
-            <div className="mt-10 grid grid-cols-2 gap-6 border-t border-white/[0.05] pt-8 md:grid-cols-3">
+            <div className="mt-10 grid grid-cols-2 gap-6 border-t border-white/[0.05] pt-8">
               {[
-                { label: "Studio of", v: "8" },
-                { label: "Years", v: "4+" },
-                { label: "Partners · 2026", v: "9" },
+                { label: "Studio of", v: "2" },
+                { label: "Founded", v: "2025" },
               ].map((s) => (
                 <div key={s.label}>
                   <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-fog-muted">

@@ -10,31 +10,13 @@ const ease = [0.16, 1, 0.3, 1] as const;
 
 const PLATFORMS = [
   {
-    client: "Halcyon House",
-    sector: "Hospitality · Operations",
-    title: "Bookings, guests, and concierge as one connected system",
-    metric: "99.4%",
-    metricLabel: "on-time turnover",
-    modules: ["Bookings", "Guests", "Rooms", "Concierge", "Reports"],
+    slug: "happy-herbals",
+    client: "Happy Herbals",
+    sector: "Commerce · Operations",
+    title: "Storefront, acquisition and re-engagement as one connected system",
+    metricLabel: "Shopify + Meta ads + a WhatsApp engine the brand runs day to day",
+    modules: ["Shopify", "Catalog", "Meta Ads", "WhatsApp", "Broadcasts"],
     accent: "rgba(168,136,74,0.18)",
-  },
-  {
-    client: "Northwave",
-    sector: "Studio · Workflow",
-    title: "Studio operations, project pipelines, and resourcing",
-    metric: "+62%",
-    metricLabel: "billable utilization",
-    modules: ["Pipeline", "Resourcing", "Briefs", "Time", "Invoicing"],
-    accent: "rgba(61,107,255,0.16)",
-  },
-  {
-    client: "Halcyon Capital",
-    sector: "Finance · Investor Portal",
-    title: "Fund factsheets and a quiet investor portal",
-    metric: "$4.2B",
-    metricLabel: "AUM under reporting",
-    modules: ["Funds", "Statements", "Documents", "KYC", "Reports"],
-    accent: "rgba(185,70,200,0.14)",
   },
 ];
 
@@ -69,7 +51,7 @@ export function PlatformsShowcase() {
           </Link>
         </div>
 
-        <div className="mt-20 grid grid-cols-1 gap-8 lg:grid-cols-3 lg:gap-6">
+        <div className="mt-20 grid grid-cols-1 gap-8 sm:mx-auto sm:max-w-md">
           {PLATFORMS.map((p, i) => (
             <motion.div
               key={p.client}
@@ -79,7 +61,7 @@ export function PlatformsShowcase() {
               transition={{ duration: 0.95, ease, delay: i * 0.07 }}
             >
             <Link
-              href="/work"
+              href={`/work/${p.slug}`}
               className="lift group relative flex h-full flex-col overflow-hidden rounded-2xl border border-white/[0.06] bg-ink-900/60 hover:border-white/[0.10]"
             >
               {/* Module diagram */}
@@ -137,15 +119,12 @@ export function PlatformsShowcase() {
                 <h3 className="font-display text-[19px] font-medium leading-[1.2] tracking-tight-display text-white">
                   {p.title}
                 </h3>
-                <div className="mt-auto flex items-baseline gap-3 border-t border-white/[0.06] pt-4">
-                  <span className="font-display text-[20px] font-medium tracking-tightest text-accent">
-                    {p.metric}
-                  </span>
-                  <span className="text-[12px] text-fog-muted">
+                <div className="mt-auto flex items-start gap-3 border-t border-white/[0.06] pt-4">
+                  <span className="text-[12px] leading-[1.5] text-fog-muted">
                     {p.metricLabel}
                   </span>
                   <ArrowUpRight
-                    className="ml-auto h-4 w-4 text-fog-muted transition-all duration-500 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-white"
+                    className="ml-auto h-4 w-4 shrink-0 text-fog-muted transition-all duration-500 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-white"
                     strokeWidth={1.5}
                   />
                 </div>

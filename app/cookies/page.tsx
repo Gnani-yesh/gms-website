@@ -24,7 +24,7 @@ const SECTIONS: LegalSection[] = [
     list: [
       "Strictly necessary — required for the site to function (theme, navigation, layout). Always on.",
       "Analytics — privacy-first, aggregate-only. We use these to understand which pages get read and where the site is breaking. No personal identifiers.",
-      "Preferences — store your selections (e.g. service chips on the start-project form). Set only when you interact with those controls.",
+      "Preferences — store your selections (e.g. service chips on the contact form). Set only when you interact with those controls.",
     ],
   },
   {

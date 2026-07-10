@@ -44,7 +44,7 @@ export function Hero() {
             transition={{ duration: 1, ease, delay: 0.45 }}
             className="mt-6 font-mono text-[10.5px] uppercase tracking-[0.24em] text-fog-muted"
           >
-            UK &amp; Global · Based in the UK
+            Hyderabad, India &amp; Swansea, UK
           </motion.p>
 
           <motion.div
@@ -53,7 +53,7 @@ export function Hero() {
             transition={{ duration: 1, ease, delay: 0.5 }}
             className="mt-10 flex flex-col items-center justify-center gap-3 sm:mt-12 sm:flex-row"
           >
-            <Link href="https://wa.me/447442559228?text=Hi%2C%20I%27m%20interested%20in%20learning%20more%20about%20GMS%20and%20what%20you%20can%20build%20for%20my%20business." target="_blank" rel="noopener noreferrer" className="btn-primary">
+            <Link href="/contact" className="btn-primary">
               Start a project
               <ArrowUpRight className="h-3.5 w-3.5" strokeWidth={2.25} />
             </Link>
@@ -84,12 +84,12 @@ export function Hero() {
         >
           <div className="mx-auto max-w-[820px] text-center">
             <p className="eyebrow">
-              Trusted by modern teams shaping their category
+              Some of the clients we&apos;ve worked with
             </p>
           </div>
           <div className="hairline mx-auto mt-9 max-w-[820px]" />
-          <div className="mx-auto mt-10 grid max-w-[920px] grid-cols-2 gap-y-9 sm:grid-cols-3 md:grid-cols-5">
-            {["Happy Herbals", "Thril", "Yeshveda", "Navavarna Infra", "Dr. Krishna"].map(
+          <div className="mx-auto mt-10 grid max-w-[620px] grid-cols-1 gap-y-9 sm:grid-cols-3">
+            {["Happy Herbals", "Navavarna Infra", "Dr. Krishna"].map(
               (name) => (
                 <div
                   key={name}
@@ -107,7 +107,7 @@ export function Hero() {
             <div className="flex items-center gap-3">
               <span className="h-1 w-1 rounded-full bg-fog-muted/70" />
               <span className="font-mono text-[10px] uppercase tracking-[0.24em] text-fog-muted">
-                Studio · Swansea &amp; Hyderabad — Established MMXXII
+                Studio · Swansea &amp; Hyderabad — Established MMXXV
               </span>
               <span className="h-1 w-1 rounded-full bg-fog-muted/70" />
             </div>

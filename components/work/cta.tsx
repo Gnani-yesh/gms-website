@@ -12,7 +12,7 @@ export function WorkCTA() {
           <span className="italic font-light text-fog">next index.</span>
         </>
       }
-      description="We take on a small number of new partners each year. If you're at an inflection where the work needs to be exceptional, we'd love to talk."
+      description="You work directly with the two of us, not an account manager. If you're at a point where the work needs to be really good, we'd love to talk."
       primaryLabel="Start a project"
       ghostLabel="Read about the studio"
       ghostHref="/studio"

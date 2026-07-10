@@ -87,7 +87,7 @@ export function WebsitesHero() {
 }
 
 /* ════════════════════════════════════════════
-   HERO PREVIEW — Halcyon House luxury hospitality
+   HERO PREVIEW — sample hospitality site (illustrative)
    ════════════════════════════════════════════ */
 function HeroPreview() {
   return (
@@ -126,7 +126,7 @@ function HeroPreview() {
           <div className="flex items-center gap-2 rounded-full border border-white/[0.05] bg-white/[0.02] px-3 py-1">
             <span className="h-1 w-1 rounded-full bg-emerald-400/80" />
             <span className="font-mono text-[9.5px] tracking-wider text-fog-muted">
-              halcyon.house
+              thecoasthouse.example
             </span>
           </div>
           <div className="flex items-center gap-1">
@@ -141,7 +141,7 @@ function HeroPreview() {
           {/* Site header */}
           <div className="flex items-center justify-between px-5 py-4 sm:px-8 sm:py-5 lg:px-12 lg:py-6">
             <span className="font-display text-[12px] font-medium tracking-tight-display text-white sm:text-[13px] lg:text-[15px]">
-              Halcyon House
+              The Coast House
             </span>
             <div className="flex items-center gap-3 sm:gap-4 lg:gap-6">
               {["STAY", "STORY", "CONCIERGE", "RESERVE"].map((n) => (
@@ -160,7 +160,7 @@ function HeroPreview() {
             {/* Editorial text */}
             <div className="flex flex-1 flex-col justify-center">
               <div className="font-mono text-[7.5px] uppercase tracking-[0.22em] text-fog-muted sm:text-[8.5px] lg:text-[9px]">
-                — Est. MMXXII · North Goa
+                — North Goa
               </div>
               <div
                 className="mt-3 font-display font-medium leading-[0.9] tracking-tightest text-white"

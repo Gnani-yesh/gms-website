@@ -49,8 +49,8 @@ export function WorkHero() {
             transition={{ duration: 1, ease, delay: 0.35 }}
             className="mx-auto mt-7 max-w-[640px] text-pretty text-[15.5px] leading-[1.6] text-fog sm:mt-9 sm:text-[16px] md:text-[17.5px]"
           >
-            We take on a small number of clients each year. Here&apos;s some of
-            the work — websites, branding and growth we&apos;re proud of.
+            It&apos;s a small, two-person studio. Here&apos;s some of the work —
+            websites, branding and growth we&apos;re proud of.
           </motion.p>
 
           {/* Filter rail */}
