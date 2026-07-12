@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useMemo, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowUpRight, ArrowLeft, Check, Loader2 } from "lucide-react";
 
@@ -37,10 +37,10 @@ const GOALS = [
 const TIMELINES = ["Within 30 days", "1–3 months", "3–6 months", "Just exploring"];
 
 const BUDGETS = [
-  "Under ₹15,000",
-  "₹15,000 – ₹40,000",
-  "₹40,000 – ₹80,000",
-  "₹80,000+",
+  "Under ₹15,000 (≈ under £140)",
+  "₹15,000 – ₹40,000 (≈ £140 – £380)",
+  "₹40,000 – ₹80,000 (≈ £380 – £760)",
+  "₹80,000+ (≈ £760+)",
   "Prefer to discuss",
 ];
 
@@ -87,9 +87,36 @@ export function ContactWizard() {
     "idle"
   );
   const [direction, setDirection] = useState(1);
+  const advanceTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const set = <K extends keyof Answers>(key: K, value: Answers[K]) =>
     setA((prev) => ({ ...prev, [key]: value }));
+
+  const clearAdvance = () => {
+    if (advanceTimer.current) {
+      clearTimeout(advanceTimer.current);
+      advanceTimer.current = null;
+    }
+  };
+
+  /** Set a single-select answer; optionally auto-advance after a brief beat. */
+  const pickSingle = <K extends keyof Answers>(
+    key: K,
+    value: Answers[K],
+    advance = true
+  ) => {
+    set(key, value);
+    clearAdvance();
+    if (advance) {
+      const from = step;
+      advanceTimer.current = setTimeout(() => {
+        advanceTimer.current = null;
+        setDirection(1);
+        // Only advance if the visitor is still on the step they chose from.
+        setStep((s) => (s === from ? s + 1 : s));
+      }, 350);
+    }
+  };
 
   const toggleNeed = (value: string) =>
     setA((prev) => ({
@@ -132,6 +159,7 @@ export function ContactWizard() {
   }, [step, a, phoneRequired, emailValid]);
 
   const go = (next: number) => {
+    clearAdvance();
     setDirection(next > step ? 1 : -1);
     setStep(next);
   };
@@ -273,7 +301,7 @@ export function ContactWizard() {
                       key={o}
                       label={o}
                       active={a.businessType === o}
-                      onClick={() => set("businessType", o)}
+                      onClick={() => pickSingle("businessType", o, o !== "Other")}
                     />
                   ))}
                 </ChipGroup>
@@ -297,7 +325,7 @@ export function ContactWizard() {
                       key={o}
                       label={o}
                       active={a.goal === o}
-                      onClick={() => set("goal", o)}
+                      onClick={() => pickSingle("goal", o)}
                     />
                   ))}
                 </ChipGroup>
@@ -312,7 +340,7 @@ export function ContactWizard() {
                       key={o}
                       label={o}
                       active={a.timeline === o}
-                      onClick={() => set("timeline", o)}
+                      onClick={() => pickSingle("timeline", o)}
                     />
                   ))}
                 </ChipGroup>
@@ -327,7 +355,7 @@ export function ContactWizard() {
                       key={o}
                       label={o}
                       active={a.budget === o}
-                      onClick={() => set("budget", o)}
+                      onClick={() => pickSingle("budget", o)}
                     />
                   ))}
                 </ChipGroup>
@@ -353,7 +381,7 @@ export function ContactWizard() {
                     <input
                       value={a.name}
                       onChange={(e) => set("name", e.target.value)}
-                      placeholder="Gnani Patel"
+                      placeholder="John Smith"
                       className={inputClass}
                     />
                   </LabeledField>
@@ -385,7 +413,7 @@ export function ContactWizard() {
                         autoFocus
                         value={a.phone}
                         onChange={(e) => set("phone", e.target.value)}
-                        placeholder="+91 98765 43210"
+                        placeholder="+44 7700 900123"
                         className={inputClass}
                       />
                     </LabeledField>
