@@ -7,7 +7,7 @@ const ease = [0.16, 1, 0.3, 1] as const;
 
 export function ContactHero() {
   return (
-    <section className="relative isolate overflow-hidden pt-36 sm:pt-44 md:pt-52">
+    <section className="relative isolate pt-36 sm:pt-44 md:pt-52">
       <AmbientField />
       <div className="absolute inset-0 -z-10 grid-bg opacity-30" />
 
@@ -60,7 +60,15 @@ export function ContactHero() {
 
 function AmbientField() {
   return (
-    <div className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[700px] overflow-hidden">
+    <div
+      className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[700px] overflow-hidden"
+      style={{
+        maskImage:
+          "linear-gradient(to bottom, #000 55%, transparent 90%)",
+        WebkitMaskImage:
+          "linear-gradient(to bottom, #000 55%, transparent 90%)",
+      }}
+    >
       <motion.div
         className="ambient animate-ambient-drift"
         style={{

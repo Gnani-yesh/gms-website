@@ -37,10 +37,10 @@ const GOALS = [
 const TIMELINES = ["Within 30 days", "1–3 months", "3–6 months", "Just exploring"];
 
 const BUDGETS = [
-  "Under ₹15,000 (≈ under £140)",
-  "₹15,000 – ₹40,000 (≈ £140 – £380)",
-  "₹40,000 – ₹80,000 (≈ £380 – £760)",
-  "₹80,000+ (≈ £760+)",
+  "Under ₹20,000 (£190)",
+  "₹20,000 – ₹40,000 (£190 – £380)",
+  "₹40,000 – ₹80,000 (£380 – £760)",
+  "₹80,000+ (£760+)",
   "Prefer to discuss",
 ];
 
@@ -350,14 +350,18 @@ export function ContactWizard() {
             {step === 4 && (
               <StepShell title="What's your budget?">
                 <ChipGroup>
-                  {BUDGETS.map((o) => (
-                    <Chip
-                      key={o}
-                      label={o}
-                      active={a.budget === o}
-                      onClick={() => pickSingle("budget", o)}
-                    />
-                  ))}
+                  {BUDGETS.map((o) => {
+                    const m = o.match(/^(.*?) \((.*)\)$/);
+                    return (
+                      <Chip
+                        key={o}
+                        label={m ? m[1] : o}
+                        sublabel={m ? m[2] : undefined}
+                        active={a.budget === o}
+                        onClick={() => pickSingle("budget", o)}
+                      />
+                    );
+                  })}
                 </ChipGroup>
               </StepShell>
             )}
@@ -566,15 +570,17 @@ function StepShell({
 }
 
 function ChipGroup({ children }: { children: React.ReactNode }) {
-  return <div className="grid grid-cols-1 gap-2.5 sm:grid-cols-2">{children}</div>;
+  return <div className="grid grid-cols-2 gap-2.5">{children}</div>;
 }
 
 function Chip({
   label,
+  sublabel,
   active,
   onClick,
 }: {
   label: string;
+  sublabel?: string;
   active: boolean;
   onClick: () => void;
 }) {
@@ -582,14 +588,24 @@ function Chip({
     <button
       type="button"
       onClick={onClick}
-      className={`flex w-full items-center justify-between gap-3 rounded-xl border px-5 py-3.5 text-left text-[14.5px] tracking-tight transition-colors duration-300 ${
+      className={`relative flex min-h-[48px] w-full items-center rounded-xl border px-3 py-2.5 pr-7 text-left text-[12.5px] leading-[1.25] tracking-tight transition-colors duration-300 ${
         active
           ? "border-accent/50 bg-accent/[0.08] text-accent"
           : "border-white/[0.08] bg-white/[0.02] text-fog hover:border-white/[0.16] hover:text-white"
       }`}
     >
-      <span>{label}</span>
-      {active && <Check className="h-4 w-4 shrink-0" strokeWidth={2.5} />}
+      <span className="flex flex-col">
+        <span>{label}</span>
+        {sublabel && (
+          <span className="mt-0.5 text-[11px] opacity-60">{sublabel}</span>
+        )}
+      </span>
+      {active && (
+        <Check
+          className="absolute right-2.5 top-1/2 h-3.5 w-3.5 -translate-y-1/2 shrink-0"
+          strokeWidth={2.5}
+        />
+      )}
     </button>
   );
 }
