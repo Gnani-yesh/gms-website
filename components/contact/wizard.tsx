@@ -207,7 +207,17 @@ export function ContactWizard() {
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: encode(),
       });
+      // A non-2xx (e.g. Netlify's 404 when the submission doesn't match the
+      // detected form) is a failure.
       if (!res.ok) throw new Error(`Bad status ${res.status}`);
+      // Guard against a "false 200": if Netlify isn't actually handling the
+      // form, a POST to "/" returns the site's own static page with a 200.
+      // Netlify's real success response is its own page and never contains the
+      // site's branding, so treat the site page coming back as a failure.
+      const body = await res.text();
+      if (/gnani marketing/i.test(body)) {
+        throw new Error("Submission was not accepted by the forms backend");
+      }
       if (a.contactMethod === "WhatsApp") {
         window.open(buildWhatsAppLink(), "_blank", "noopener,noreferrer");
       }
